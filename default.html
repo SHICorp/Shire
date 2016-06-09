@@ -1,0 +1,3315 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Start Screen Design</title>
+        <link type="text/css" rel="stylesheet" href="css\bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+        <link type="text/css" rel="stylesheet" href="css\scrollbar.css" />
+        <link type="text/css" rel="stylesheet" href="css\shire.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="profile">
+                <button class="btn btn-float"><span class="ion-compose"></span>Change</button>
+                <img src="samples\avatar.png" width="250" />
+            </div>
+            <div class="scroll-wrapper">
+                <ul class="nav-items scroll-content">
+                    <li>
+                        <a href="#home">
+                            <div class="ion-android-home nav-icon"></div>
+                            <div class="nav-title">Home</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#files">
+                            <div class="ion-android-folder nav-icon"></div>
+                            <div class="nav-title">Files</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#groups">
+                            <div class="ion-android-people nav-icon"></div>
+                            <div class="nav-title">Groups</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#apps">
+                            <div class="ion-android-apps nav-icon"></div>
+                            <div class="nav-title">Apps</div>
+                        </a>
+                    </li>					
+                    <li>
+                        <a href="#people">
+                            <div class="ion-android-person nav-icon"></div>
+                            <div class="nav-title">People</div>
+                        </a>
+                    </li>					
+                    <li>
+                        <a href="#components">
+                            <div class="ion-social-buffer nav-icon"></div>
+                            <div class="nav-title">Components</div>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#buttons">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Buttons</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#cards">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Cards</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#chips">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Chips</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#data-tables">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Data Tables</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dialogs">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Dialogs</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#grid-list">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Grid List</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#list">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">List</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#list-controls">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">List Controls</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#menus">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Menus</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#progress-activity">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Progress & Activity</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#subheader">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Subheader</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tabs">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Tabs</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#text-fields">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Text Fields</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#toasts">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Toasts</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#toolbars">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Toolbars</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tooltips">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Tooltips</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#settings">
+                            <div class="ion-android-settings nav-icon"></div>
+                            <div class="nav-title">Settings</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <header>
+                <div class="appbar">
+                    <div class="ion-with-text float-r send-feedback">Send Feedback</div>
+                    <div class="ion-android-menu float-l show-nav"></div>
+                    <div class="ion-search float-l"></div>
+                    <div class="appbar-text">
+                        <input type="text" value="Search..." />
+                    </div>
+                </div>
+            </header>
+			<!--
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <div class="ion-android-hangout sidebar-icon"></div>
+                    <div class="sidebar-title">
+                        Yammer
+                    </div>
+                </div>
+                <div class="sidebar-content">
+                    <div id="embedded-feed"></div>
+                </div>
+            </div>
+			-->
+            <content>
+                <div class="container-fluid">
+                    <div class="row">
+                        <a name="home"></a>
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-8">
+									<div class="row">
+										<div class="col-md-12 col-lg-8">
+											<div class="card">									
+												<div class="card-header">
+													<div class="card-title">
+														<div class="ion-android-apps"></div>
+														<div class="card-title-with-icon" title="Recent Documents">
+															Recent Documents
+														</div>
+													</div>
+												</div>
+												<div class="card-body">
+													<div class="list">
+														<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+															<div class="list-action ion-eye" data-toggle="tooltip" data-placement="left" title="Viewed a few seconds ago">
+															</div>
+															<div class="list-icon">
+																<img src="img\pdf.png" />
+															</div>
+															<div class="list-body">
+																<div class="list-title" title="Online Document Name">Online Document Name</div>
+																<div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
+															</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+															<div class="list-action ion-compose" data-toggle="tooltip" data-placement="left" title="Edited several days ago"></div>
+															<div class="list-icon">
+																<img src="img\word.png" />
+															</div>
+															<div class="list-body">
+																<div class="list-title" title="Online Document Name">Online Document Name</div>
+																<div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+															</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+															<div class="list-action ion-compose" data-toggle="tooltip" data-placement="left" title="Edited several days ago"></div>
+															<div class="list-icon">
+																<img src="img\word.png" />
+															</div>
+															<div class="list-body">
+																<div class="list-title" title="Online Document Name">Online Document Name</div>
+																<div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+															</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+															<div class="list-action ion-eye" data-toggle="tooltip" data-placement="left" title="Viewed several days ago"></div>
+															<div class="list-icon">
+																<img src="img\pdf.png" />
+															</div>
+															<div class="list-body">
+																<div class="list-title" title="Online Document Name">Online Document Name</div>
+																<div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
+															</div>
+														</div>
+														
+														<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+															<div class="list-action ion-eye" data-toggle="tooltip" data-placement="left" title="Viewed several days ago"></div>
+															<div class="list-icon">
+																<img src="img\pdf.png" />
+															</div>
+															<div class="list-body">
+																<div class="list-title" title="Online Document Name">Online Document Name</div>
+																<div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
+															</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+															<div class="list-action ion-compose" data-toggle="tooltip" data-placement="left" title="Edited several days ago"></div>
+															<div class="list-icon">
+																<img src="img\word.png" />
+															</div>
+															<div class="list-body">
+																<div class="list-title" title="Online Document Name">Online Document Name</div>
+																<div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+															</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+															<div class="list-action ion-compose" data-toggle="tooltip" data-placement="left" title="Edited several days ago"></div>
+															<div class="list-icon">
+																<img src="img\word.png" />
+															</div>
+															<div class="list-body">
+																<div class="list-title" title="Online Document Name">Online Document Name</div>
+																<div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+															</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+															<div class="list-action ion-eye" data-toggle="tooltip" data-placement="left" title="Viewed several days ago"></div>
+															<div class="list-icon">
+																<img src="img\pdf.png" />
+															</div>
+															<div class="list-body">
+																<div class="list-title" title="Online Document Name">Online Document Name</div>
+																<div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
+															</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+															<div class="list-action ion-eye" data-toggle="tooltip" data-placement="left" title="Viewed several days ago"></div>
+															<div class="list-icon">
+																<img src="img\pdf.png" />
+															</div>
+															<div class="list-body">
+																<div class="list-title" title="Online Document Name">Online Document Name</div>
+																<div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
+															</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+															<div class="list-action ion-compose" data-toggle="tooltip" data-placement="left" title="Edited several days ago"></div>
+															<div class="list-icon">
+																<img src="img\word.png" />
+															</div>
+															<div class="list-body">
+																<div class="list-title" title="Online Document Name">Online Document Name</div>
+																<div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="card-actions">
+													<button class="btn btn-flat" title="Show More"><span class="ion-more"></span></button>
+												</div>										
+											</div>
+											<div class="card">
+												<div class="card-header">
+													<div class="card-title">
+														<div class="ion-android-apps"></div>
+														<div class="card-title-with-icon" title="Recent Sites">
+															Recent Sites
+														</div>
+													</div>
+												</div>
+												<div class="card-body">
+													<div class="grid-list">
+														<div class="row">
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white" href="#">
+																	<img src="samples\city1.jpg" />
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="Yokohama">
+																			Yokohama
+																		</div>
+																	</div>
+																</a>
+															</div>
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white" href="#">
+																	<img src="samples\city4.jpg" />
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="Rio de Janerio">
+																			Rio de Janerio
+																		</div>
+																	</div>
+																</a>
+															</div>
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white" href="#">
+																	<img src="samples\city7.jpg" />
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="Rotterdam">
+																			Rotterdam
+																		</div>
+																	</div>
+																</a>
+															</div>
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white" href="#">
+																	<img src="samples\city8.jpg" />
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="Porto">
+																			Porto
+																		</div>
+																	</div>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>									
+											<div class="card">
+												<div class="card-header">
+													<div class="card-title">
+														<div class="ion-android-apps"></div>
+														<div class="card-title-with-icon" title="Popular Applications">
+															Popular Applications
+														</div>
+													</div>
+												</div>
+												<div class="card-body">
+													<div class="grid-list">
+														<div class="row">
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white tile-accentColor-blue" href="#">
+																	<div class="ion-social-facebook"></div>
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="Facebook">
+																			Facebook
+																		</div>
+																	</div>
+																</a>
+															</div>
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white tile-accentColor-blueLight" href="#">
+																	<div class="ion-social-twitter"></div>
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="Twitter">
+																			Twitter
+																		</div>
+																	</div>
+																</a>
+															</div>
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white tile-accentColor-red" href="#">
+																	<div class="ion-social-googleplus"></div>
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="Google+">
+																			Google+
+																		</div>
+																	</div>
+																</a>
+															</div>
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white tile-accentColor-orange" href="#">
+																	<div class="ion-social-instagram"></div>
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="Instagram">
+																			Instagram
+																		</div>
+																	</div>
+																</a>
+															</div>
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white tile-accentColor-green" href="#">
+																	<div class="ion-social-whatsapp"></div>
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="WhatsApp">
+																			WhatsApp
+																		</div>
+																	</div>
+																</a>
+															</div>
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white tile-accentColor-magenta" href="#">
+																	<div class="ion-social-pinterest"></div>
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="Pinterest">
+																			Pinterest
+																		</div>
+																	</div>
+																</a>
+															</div>
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white tile-accentColor-red" href="#">
+																	<div class="ion-social-youtube"></div>
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="YouTube">
+																			YouTube
+																		</div>
+																	</div>
+																</a>
+															</div>
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white tile-accentColor-purple" href="#">
+																	<div class="ion-social-twitch"></div>
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="Twitch">
+																			Twitch
+																		</div>
+																	</div>
+																</a>
+															</div>
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white tile-accentColor-blueLight" href="#">
+																	<div class="ion-social-skype"></div>
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="Skype">
+																			Skype
+																		</div>
+																	</div>
+																</a>
+															</div>
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white tile-accentColor-yellow" href="#">
+																	<div class="ion-social-tumblr"></div>
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="Tumblr">
+																			Tumblr
+																		</div>
+																	</div>
+																</a>
+															</div>
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white tile-accentColor-blueMid" href="#">
+																	<div class="ion-social-linkedin"></div>
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="LinkedIn">
+																			LinkedIn
+																		</div>
+																	</div>
+																</a>
+															</div>
+															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
+																<a class="thumbnail-wrapper square bordered b-white tile-accentColor-redDark" href="#">
+																	<div class="ion-social-reddit"></div>
+																	<div class="grid-content">
+																		<div class="grid-action">
+																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+																		</div>
+																		<div class="grid-title" title="Reddit">
+																			Reddit
+																		</div>
+																	</div>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-lg-4">
+											<div class="card">
+												<div class="card-header">
+													<div class="card-title">
+														<div class="ion-android-apps"></div>
+														<div class="card-title-with-icon" title="Today">
+															Today
+														</div>
+													</div>
+												</div>
+												<div class="card-body">
+													<div class="list">
+														<div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+															<div class="list-action ion-information-circled"></div>
+															<div class="list-icon ion-android-calendar"></div>
+															<div class="list-body">
+																<div class="list-title" title="Staff Meeting">Staff Meeting</div>
+																<div class="list-line" title="30 minutes"><div class="ion-android-time"></div>9:00am</div>
+																<div class="list-line"><div class="ion-android-pin"></div>Location</div>
+															</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+															<div class="list-action ion-information-circled"></div>
+															<div class="list-icon ion-android-calendar"></div>
+															<div class="list-body">
+																<div class="list-title" title="Staff Meeting">Staff Meeting</div>
+																<div class="list-line" title="30 minutes"><div class="ion-android-time"></div>9:00am</div>
+																<div class="list-line"><div class="ion-android-pin"></div>Location</div>
+															</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+															<div class="list-action ion-information-circled"></div>
+															<div class="list-icon ion-android-calendar"></div>
+															<div class="list-body">
+																<div class="list-title" title="Staff Meeting">Staff Meeting</div>
+																<div class="list-line" title="30 minutes"><div class="ion-android-time"></div>9:00am</div>
+																<div class="list-line"><div class="ion-android-pin"></div>Location</div>
+															</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+															<div class="list-action ion-information-circled"></div>
+															<div class="list-icon ion-android-calendar"></div>
+															<div class="list-body">
+																<div class="list-title" title="Staff Meeting">Staff Meeting</div>
+																<div class="list-line" title="30 minutes"><div class="ion-android-time"></div>9:00am</div>
+																<div class="list-line"><div class="ion-android-pin"></div>Location</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="card-actions">
+													<button class="btn btn-flat" title="Show More"><span class="ion-more"></span></button>
+												</div>																						
+											</div>
+											<div class="card">
+												<div class="card-header">
+													<div class="card-title">
+														<div class="ion-android-apps"></div>
+														<div class="card-title-with-icon" title="To-Do">
+															To-Do
+														</div>
+													</div>
+												</div>
+												<div class="card-body">
+													<div class="list">
+														<div class="subheader">
+															<div class="subheader-title">No Date</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+															<div class="list-action ion-android-checkbox-outline-blank" data-toggle="tooltip" data-placement="left" title="Not Started"></div>
+															<div class="list-icon ion-android-clipboard"></div>
+															<div class="list-body">
+																<div class="list-title" title="Not Started Task">Not Started Task</div>
+																<div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+															</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+															<div class="list-action ion-flag" data-toggle="tooltip" data-placement="left" title="In Progress"></div>
+															<div class="list-icon ion-android-clipboard"></div>
+															<div class="list-body">
+																<div class="list-title" title="In Progress Task">In Progress Task</div>
+																<div class="list-line"><div class="ion-android-cloud"></div>Cloud App</div>
+															</div>
+														</div>
+														<div class="subheader">
+															<div class="subheader-title">Today</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+															<div class="list-action ion-android-checkbox" data-toggle="tooltip" data-placement="left" title="Completed"></div>
+															<div class="list-icon ion-android-clipboard" title="Completed"></div>
+															<div class="list-body">
+																<div class="list-title" title="Completed Task">Completed Task</div>
+																<div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+															</div>
+														</div>
+														<div class="subheader">
+															<div class="subheader-title">This Week</div>
+														</div>
+														<div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+															<div class="list-action ion-android-checkbox-outline-blank" data-toggle="tooltip" data-placement="left" title="Not Started"></div>
+															<div class="list-icon ion-android-clipboard" title="Not Started"></div>
+															<div class="list-body">
+																<div class="list-title" title="Not Started Task">Not Started Task</div>
+																<div class="list-line"><div class="ion-android-cloud"></div>Cloud App</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="card-actions">
+													<button class="btn btn-flat" title="Show More"><span class="ion-more"></span></button>
+												</div>																																		
+											</div>										
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-4">
+                                    <div class="card">									
+                                        <div class="card-header">
+                                            <div class="card-title">
+                                                <div class="ion-android-apps"></div>
+                                                <div class="card-title-with-icon" title="Recent Documents">
+                                                    Yammer
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+											<div id="embedded-feed"></div>
+										</div>										
+									</div>
+								</div>
+                            </div>
+                        </div>
+						<div class="col-sm-12">
+							<a name="files"></a><hr></hr>
+						</div>
+						<div class="col-sm-12">
+							<a name="groups"></a><hr></hr>
+						</div>						
+						<div class="col-sm-12">
+							<a name="apps"></a><hr></hr>
+						</div>
+						<div class="col-sm-12">
+							<div class="row">
+								<div class="col-md-12 col-lg-9">
+                                    <div class="card">
+										<div class="card-header">
+											<div class="card-title" title="Apps">
+												Apps
+											</div>
+										</div>
+										<div class="card-body">
+											<div class="grid-list">
+												<div class="subheader">
+													<div class="subheader-title">Company Apps</div>
+												</div>
+												<div class="row">
+													<div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+														<a class="thumbnail-wrapper square bordered b-white" href="#">
+															<img src="http://i.imgur.com/kDjw0KB.jpg" />
+															<div class="grid-content two-lines">
+																<div class="grid-action">
+																	<div class="ion-android-star"></div>
+																</div>
+																<div class="grid-title">
+																	Asian Pork Jerky
+																</div>
+																<div class="grid-line-2">
+																	Lorem ipsum dolor sit amet
+																</div>
+															</div>
+														</a>
+													</div>
+													<div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+														<a class="thumbnail-wrapper square bordered b-white" href="#">
+															<img src="http://i.imgur.com/axXH76R.jpg" />
+															<div class="grid-content two-lines">
+																<div class="grid-action">
+																	<div class="ion-android-star"></div>
+																</div>
+																<div class="grid-title">
+																	Mexican Breakfast
+																</div>
+																<div class="grid-line-2">
+																	Lorem ipsum dolor sit amet
+																</div>
+															</div>
+														</a>
+													</div>
+													<div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+														<a class="thumbnail-wrapper square bordered b-white" href="#">
+															<img src="http://i.imgur.com/Pw8lR3V.jpg" />
+															<div class="grid-content two-lines">
+																<div class="grid-action">
+																	<div class="ion-android-star"></div>
+																</div>
+																<div class="grid-title">
+																	Sushi
+																</div>
+																<div class="grid-line-2">
+																	Lorem ipsum dolor sit amet
+																</div>
+															</div>
+														</a>
+													</div>
+													<div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+														<a class="thumbnail-wrapper square bordered b-white" href="#">
+															<img src="http://i.imgur.com/uaQBLrI.jpg" />
+															<div class="grid-content two-lines">
+																<div class="grid-action">
+																	<div class="ion-android-star"></div>
+																</div>															
+																<div class="grid-title">
+																	Blood Orange
+																</div>
+																<div class="grid-line-2">
+																	Lorem ipsum dolor sit amet
+																</div>
+															</div>
+														</a>
+													</div>
+													<div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+														<a class="thumbnail-wrapper square bordered b-white" href="#">
+															<img src="http://i.imgur.com/TbC7Gof.jpg" />
+															<div class="grid-content two-lines">
+																<div class="grid-action">
+																	<div class="ion-android-star"></div>
+																</div>
+																<div class="grid-title">
+																	Fanesca
+																</div>
+																<div class="grid-line-2">
+																	Lorem ipsum dolor sit amet
+																</div>
+															</div>
+														</a>
+													</div>
+													<div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+														<a class="thumbnail-wrapper square bordered b-white" href="#">
+															<img src="http://i.imgur.com/srbRSoS.jpg" />
+															<div class="grid-content two-lines">
+																<div class="grid-action">
+																	<div class="ion-android-star"></div>
+																</div>
+																<div class="grid-title">
+																	Chicken, Sausage &amp; Shrimp Jambalaya
+																</div>
+																<div class="grid-line-2">
+																	Lorem ipsum dolor sit amet
+																</div>
+															</div>
+														</a>
+													</div>												
+												</div>
+                                                <div class="subheader">
+                                                    <div class="subheader-title">Social Apps</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-blue" href="#">
+                                                            <div class="ion-social-facebook"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Facebook">
+                                                                    Facebook
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-blueLight" href="#">
+                                                            <div class="ion-social-twitter"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Twitter">
+                                                                    Twitter
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-red" href="#">
+                                                            <div class="ion-social-googleplus"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Google+">
+                                                                    Google+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-orange" href="#">
+                                                            <div class="ion-social-instagram"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Instagram">
+                                                                    Instagram
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-green" href="#">
+                                                            <div class="ion-social-whatsapp"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="WhatsApp">
+                                                                    WhatsApp
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-magenta" href="#">
+                                                            <div class="ion-social-pinterest"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Pinterest">
+                                                                    Pinterest
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-red" href="#">
+                                                            <div class="ion-social-youtube"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="YouTube">
+                                                                    YouTube
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-purple" href="#">
+                                                            <div class="ion-social-twitch"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Twitch">
+                                                                    Twitch
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-blueLight" href="#">
+                                                            <div class="ion-social-skype"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Skype">
+                                                                    Skype
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-yellow" href="#">
+                                                            <div class="ion-social-tumblr"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Tumblr">
+                                                                    Tumblr
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-blueMid" href="#">
+                                                            <div class="ion-social-linkedin"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="LinkedIn">
+                                                                    LinkedIn
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-redDark" href="#">
+                                                            <div class="ion-social-reddit"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Reddit">
+                                                                    Reddit
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="subheader">
+                                                    <div class="subheader-title">Developer Apps</div>
+                                                </div>	
+												<div class="row">
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-orangeLight" href="#">
+                                                            <div class="ion-social-html5"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Facebook">
+                                                                    HTML 5
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>												
+												</div>
+                                            </div>
+                                        </div>
+                                    </div>								
+								</div>
+								<div class="col-md-12 col-lg-3">
+									<h3>Favorite Apps</h3>
+									<div class="row">
+										<div class="list">
+											<div class="list-item single col-sm-12">
+												<div class="list-action ion-android-star ion-active"></div>
+												<div class="list-image">
+													<div class="thumbnail-wrapper square bordered b-white tile-accentColor-blue">
+														<div class="ion-social-facebook"></div>
+													</div>
+												</div>
+												<div class="list-body">
+													<div class="list-title">Facebook</div>
+												</div>
+											</div>
+										</div>
+									</div>								
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<a name="people"></a><hr></hr>
+						</div>
+						<div class="col-sm-12">
+							<div class="row">
+								<div class="col-md-12 col-lg-9">
+									<div class="card">
+										<div class="card-header">
+											<div class="card-views">
+												<div class="paging">
+													<span class="paging-info">1-18</span>
+													<button class="btn btn-flat">
+														<span class="ion-chevron-left"></span>
+													</button>													
+													<button class="btn btn-flat">
+														<span class="ion-chevron-right"></span>
+													</button>
+												</div>
+											</div>
+											<div class="card-title" title="Directory">
+												Directory
+											</div>
+										</div>
+										<div class="card-body">
+											<div class="toolbar">
+												<div class="toolbar-filters">
+													<ul>
+														<li class="ion-android-funnel"></li>
+														<li>
+															Last Name
+															<span class="ion-android-arrow-dropdown"></span>
+														</li>
+														<li>
+															Department
+															<span class="ion-android-arrow-dropdown"></span>
+														</li>
+														<li>
+															Office
+															<span class="ion-android-arrow-dropdown"></span>
+														</li>
+														<li class="toolbar-search">
+															<div class="ion-search"></div>
+															<div class="toolbar-input">
+																<input type="text" value="Filter..." />
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="chip-container">
+												<div class="chip chip-with-icon">
+													<div class="ion-android-cancel float-r"></div>
+													<div class="chip-icon float-l">
+														<div class="thumbnail-wrapper chip-letter circular tile-accentColor-blueLight">
+															<span>L</span>
+														</div>
+													</div>
+													<span>Last Name</span>
+												</div>											
+											</div>
+											<div class="list">
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>											
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+												<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+													<div class="avatar">
+														<div class="thumbnail-wrapper circular">
+															<div class="thumbnail-div"></div>
+														</div>
+													</div>
+													<div class="list-body">
+														<div class="list-title">David L Lopez</div>
+														<div class="list-line">Account Executive</div>
+														<div class="list-line">Inside Sales</div>
+													</div>
+												</div>
+											</div>	
+										</div>
+										<div class="card-actions">
+											<div class="paging">
+												<div class="float-r">
+													<span class="paging-info">1-18</span>
+													<button class="btn btn-flat">
+														<span class="ion-chevron-left"></span>
+													</button>													
+													<button class="btn btn-flat">
+														<span class="ion-chevron-right"></span>
+													</button>
+												</div>
+												<div class="float-l">
+													<button class="btn btn-flat">1</button>
+													<button class="btn btn-flat">2</button>
+													<button class="btn btn-flat">3</button>
+													<button class="btn btn-flat">4</button>
+													<button class="btn btn-flat">5</button>
+													<button class="btn btn-flat">6</button>
+													<button class="btn btn-flat">7</button>
+													<button class="btn btn-flat">
+														&hellip;
+													</button>
+													<button class="btn btn-flat">34</button>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>									
+								<div class="col-md-12 col-lg-3">
+									<h3>Most Worked With</h3>
+									<div class="row">
+										<div class="list">
+											<div class="list-item col-sm-12">
+												<div class="avatar">
+													<div class="thumbnail-wrapper circular bordered b-white">
+														<div class="thumbnail-div"></div>
+													</div>
+												</div>
+												<div class="list-body">
+													<div class="list-title">David L Lopez</div>
+													<div class="list-line">Account Executive</div>
+													<div class="list-line">Inside Sales</div>
+												</div>
+											</div>
+											<div class="list-item col-sm-12">
+												<div class="avatar">
+													<div class="thumbnail-wrapper circular bordered b-white">
+														<div class="thumbnail-div"></div>
+													</div>
+												</div>
+												<div class="list-body">
+													<div class="list-title">David L Lopez</div>
+													<div class="list-line">Account Executive</div>
+													<div class="list-line">Inside Sales</div>
+												</div>
+											</div>
+											<div class="list-item col-sm-12">
+												<div class="avatar">
+													<div class="thumbnail-wrapper circular bordered b-white">
+														<div class="thumbnail-div"></div>
+													</div>
+												</div>
+												<div class="list-body">
+													<div class="list-title">David L Lopez</div>
+													<div class="list-line">Account Executive</div>
+													<div class="list-line">Inside Sales</div>
+												</div>
+											</div>
+											<div class="list-item col-sm-12">
+												<div class="avatar">
+													<div class="thumbnail-wrapper circular bordered b-white">
+														<div class="thumbnail-div"></div>
+													</div>
+												</div>
+												<div class="list-body">
+													<div class="list-title">David L Lopez</div>
+													<div class="list-line">Account Executive</div>
+													<div class="list-line">Inside Sales</div>
+												</div>
+											</div>	
+											<div class="list-item col-sm-12">
+												<div class="avatar">
+													<div class="thumbnail-wrapper circular bordered b-white">
+														<div class="thumbnail-div"></div>
+													</div>
+												</div>
+												<div class="list-body">
+													<div class="list-title">David L Lopez</div>
+													<div class="list-line">Account Executive</div>
+													<div class="list-line">Inside Sales</div>
+												</div>
+											</div>
+											<div class="list-item col-sm-12">
+												<div class="avatar">
+													<div class="thumbnail-wrapper circular bordered b-white">
+														<div class="thumbnail-div"></div>
+													</div>
+												</div>
+												<div class="list-body">
+													<div class="list-title">David L Lopez</div>
+													<div class="list-line">Account Executive</div>
+													<div class="list-line">Inside Sales</div>
+												</div>
+											</div>
+											<div class="list-item col-sm-12">
+												<div class="avatar">
+													<div class="thumbnail-wrapper circular bordered b-white">
+														<div class="thumbnail-div"></div>
+													</div>
+												</div>
+												<div class="list-body">
+													<div class="list-title">David L Lopez</div>
+													<div class="list-line">Account Executive</div>
+													<div class="list-line">Inside Sales</div>
+												</div>
+											</div>											
+										</div>
+									</div>								
+								</div>
+							</div>
+						</div>
+                        <div class="col-sm-12">
+                            <a name="components"></a>
+                            <h2>Components</h2>
+                        </div>
+                        <div class="col-sm-12">
+                            <a name="buttons"></a>
+                            <h3>Buttons</h3>
+                            <p>There are three standard types of buttons:</p>
+                            <ul>
+                                <li><strong>Floating Action Button</strong>: A button with rounded corners and used for a promoted action. Only one per screen.</li>
+                                <li><strong>Raised Button</strong>: A rectangular button used for inline buttons to add dimension to flat layouts. Primarily used for functions on busy or wide spaces.</li>
+                                <li><strong>Flat Button</strong>: Use in dialog boxes and toolbars.</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="component">
+                                <button class="btn btn-float">Button</button>
+                                <div class="component-title">Floating Action Button</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="component">
+                                <button class="btn">Button</button>
+                                <div class="component-title">Raised Button</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="component">
+                                <button class="btn btn-flat">Button</button>
+                                <div class="component-title">Flat Button</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <a name="cards"></a>
+                            <h3>Cards</h3>
+                            <p><strong>A card is a sheet of material that serves as an entry point to more detailed information.</strong></p>
+                            <p>Cards may contain a photo, text, and a link about a single subject. They may display content containing elements of varying size, such as photos with captions of variable length.</p>
+                            <p>A card collection is a layout of cards on the same plane.</p>
+                            <h4>When to use</h4>
+                            <p>Use a card layout when displaying content that:</p>
+                            <ul>
+                                <li>As a collection, comprises multiple data types, such as images, movies, and text</li>
+                                <li>Does not require direct comparison (a user is not directly comparing images or text)</li>
+                                <li>Supports content of highly variable length, such as comments</li>
+                                <li>Contains interactive content, such as +1 buttons or comments</li>
+                                <li>Would otherwise be in a grid list but needs to display more content to supplement the image</li>
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Content Blocks</h4>
+                            <p>Cards can be constructed using blocks of content which include:</p>
+                            <ul>
+                                <li>An optional header</li>
+                                <li>A primary title</li>
+                                <li>Rich media</li>
+                                <li>Supporting text</li>
+                                <li>Actions</li>
+                            </ul>
+                            <p>These blocks can be organized to promote different types of content. For example, numbers may be emphasized by increasing their typographic scale.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="component">
+                                <div class="card">
+                                    <a href="#">
+                                        <div class="card-image square">
+                                            <img src="http://i.imgur.com/ppLq3I6.png" />
+                                        </div>
+                                        <div class="card-header">
+                                            <div class="card-title small">
+                                                Grilled Corn on the Cob with Garlic Butter, Fresh Lime and Cotija Cheese
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <p>Card with action area, rich media and supporting text. Card rich media is perfectly squared when responsive</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="component">
+                                <div class="card">
+                                    <a href="#">
+                                        <div class="card-header">
+                                            <div class="card-title">
+                                                <div class="avatar">
+                                                    <div class="thumbnail-wrapper circular">
+                                                        <div class="thumbnail-div"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-title-with-icon">David L Lopez</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-image">
+                                            <img src="http://i.imgur.com/gntokJ8.jpg" />
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-content">
+                                                <p>My grandmother wrote down this recipe for me so I thought I would share it!</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="card-actions">
+                                        <div class="float-r">
+                                            <button class="btn btn-flat">Action</button>
+                                            <button class="btn btn-flat">Action</button>
+                                        </div>
+                                        <div class="float-l">
+                                            <button class="btn btn-flat"><span class="ion-android-favorite"></span></button>
+                                            <button class="btn btn-flat"><span class="ion-android-share"></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Card with action areas 1 and 2, optional header, rich media, supporting text, and supplemental actions</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="component">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            <div class="ion-android-list"></div>
+                                            <div class="card-title-with-icon">Icon Card with List</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="list">
+                                            <div class="list-item col-sm-12">
+                                                <div class="list-body">
+                                                    <div class="list-title">Two-line Item</div>
+                                                    <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                </div>
+                                            </div>
+                                            <div class="list-item col-sm-12">
+                                                <div class="list-body">
+                                                    <div class="list-title">Two-line Item</div>
+                                                    <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                </div>
+                                            </div>
+                                            <div class="list-item col-sm-12">
+                                                <div class="list-body">
+                                                    <div class="list-title">Two-line Item</div>
+                                                    <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                </div>
+                                            </div>
+                                            <div class="list-item col-sm-12">
+                                                <div class="list-body">
+                                                    <div class="list-title">Two-line Item</div>
+                                                    <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                </div>
+                                            </div>
+                                            <div class="list-item col-sm-12">
+                                                <div class="list-body">
+                                                    <div class="list-title">Two-line Item</div>
+                                                    <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                </div>
+                                            </div>
+                                            <div class="list-item col-sm-12">
+                                                <div class="list-body">
+                                                    <div class="list-title">Two-line Item</div>
+                                                    <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-actions">
+                                        <button class="btn btn-flat" title="Show More"><span class="ion-more"></span></button>
+                                    </div>
+                                </div>
+                                <p>Card with no action area, a list of content and data navigation footer</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <a name="chips"></a>
+                            <h3>Chips</h3>
+                            <p>A chip may contain a photo, short title, and brief information.</p>
+                            <h4>Types of chips</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>Chips can be used for various types of entities, including free form text, predefined text, rules, or contacts. Chips may also contain icons.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <div class="component">
+                                <div class="chip-container">
+                                    <div class="chip">
+                                        <div class="ion-android-cancel float-r"></div>
+                                        <div class="chip-icon float-l">
+                                        </div>
+                                        <span>Example Chip</span>
+                                    </div>
+                                    <div class="chip">
+                                        <div class="ion-android-cancel float-r"></div>
+                                        <div class="chip-icon float-l">
+                                        </div>
+                                        <span>Example Chip</span>
+                                    </div>
+                                </div>
+                                <p>Chips with text</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <div class="component">
+                                <div class="chip-container">
+                                    <div class="chip chip-with-icon">
+                                        <div class="ion-android-cancel float-r"></div>
+                                        <div class="chip-icon float-l">
+                                            <div class="thumbnail-wrapper chip-letter circular tile-accentColor-red">
+                                                <span>B</span>
+                                            </div>
+                                        </div>
+                                        <span>Last Name</span>
+                                    </div>
+                                    <div class="chip chip-with-icon">
+                                        <div class="ion-android-cancel float-r"></div>
+                                        <div class="chip-icon float-l">
+                                            <div class="thumbnail-wrapper chip-letter circular tile-accentColor-magenta">
+                                                <span class="ion-android-download"></span>
+                                            </div>
+                                        </div>
+                                        <span>Document-name.docx</span>
+                                    </div>
+                                </div>
+                                <p>Chip with icon and text</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <div class="component">
+                                <div class="chip-container">
+                                    <div class="chip chip-with-icon">
+                                        <div class="ion-android-cancel float-r"></div>
+                                        <div class="chip-icon float-l">
+                                            <div class="thumbnail-wrapper circular">
+                                                <img src="samples\avatar.png" />
+                                            </div>
+                                        </div>
+                                        <span>Example Chip</span>
+                                    </div>
+                                </div>
+                                <p>Chip with avatar and text</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <a name="data-tables"></a>
+                            <h3>Data Tables</h3>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Basic Table</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>A data table contains a <strong>header row</strong> at the top that lists column names, followed by rows for data.<p>
+                            <p>Every column should be sortable.</p>
+                            <p>Checkboxes should accompany each row if the user needs to select or manipulate data.</p>
+                            <p>Data tables may include:</p>
+                            <ul>
+                                <li>Three or more columns of data</li>
+                                <li>A corresponding visualization</li>
+                                <li>The ability for users to query and manipulate data</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component">
+                                <table class="table">
+                                    <tr>
+                                        <th>
+                                            Name
+                                        </th>
+                                        <th>
+                                            Address
+                                        </th>
+                                        <th class="sort">
+                                            <span class="ion-android-arrow-up"></span>
+                                            City
+                                        </th>
+                                        <th>
+                                            State
+                                        </th>
+                                        <th>
+                                            Zip
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Selectable or Actionable Icon Table</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>To be used where multiple rows can be selected or each row has an actionable icon with it.<p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component">
+                                <table class="table">
+                                    <tr>
+                                        <th class="th-icon">
+                                            <div class="ion-android-checkbox-outline-blank"></div>
+                                        </th>
+                                        <th>
+                                            Name
+                                        </th>
+                                        <th>
+                                            Address
+                                        </th>
+                                        <th class="sort">
+                                            <span class="ion-android-arrow-up"></span>
+                                            City
+                                        </th>
+                                        <th>
+                                            State
+                                        </th>
+                                        <th>
+                                            Zip
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-icon">
+                                            <div class="ion-android-checkbox-outline-blank"></div>
+                                        </td>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-icon">
+                                            <div class="ion-android-checkbox-outline-blank"></div>
+                                        </td>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                    <tr class="selected">
+                                        <td class="td-icon">
+                                            <div class="ion-android-checkbox-outline-blank"></div>
+                                        </td>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-icon">
+                                            <div class="ion-android-checkbox-outline-blank"></div>
+                                        </td>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-icon">
+                                            <div class="ion-android-checkbox-outline-blank"></div>
+                                        </td>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Table Within Cards</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>Tables may be embedded within a card, with table navigation at the bottom. Table navigation must never show pagination and always have "..." button keeping with mobile first tenant.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            Address Book
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table">
+                                            <tr>
+                                                <th>
+                                                    Name
+                                                </th>
+                                                <th>
+                                                    Address
+                                                </th>
+                                                <th class="sort">
+                                                    <span class="ion-android-arrow-up"></span>
+                                                    City
+                                                </th>
+                                                <th>
+                                                    State
+                                                </th>
+                                                <th>
+                                                    Zip
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    David L Lopez
+                                                </td>
+                                                <td>
+                                                    3983 Harrison Street
+                                                </td>
+                                                <td>
+                                                    San Rafael
+                                                </td>
+                                                <td>
+                                                    CA
+                                                </td>
+                                                <td>
+                                                    94903
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    David L Lopez
+                                                </td>
+                                                <td>
+                                                    3983 Harrison Street
+                                                </td>
+                                                <td>
+                                                    San Rafael
+                                                </td>
+                                                <td>
+                                                    CA
+                                                </td>
+                                                <td>
+                                                    94903
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    David L Lopez
+                                                </td>
+                                                <td>
+                                                    3983 Harrison Street
+                                                </td>
+                                                <td>
+                                                    San Rafael
+                                                </td>
+                                                <td>
+                                                    CA
+                                                </td>
+                                                <td>
+                                                    94903
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    David L Lopez
+                                                </td>
+                                                <td>
+                                                    3983 Harrison Street
+                                                </td>
+                                                <td>
+                                                    San Rafael
+                                                </td>
+                                                <td>
+                                                    CA
+                                                </td>
+                                                <td>
+                                                    94903
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    David L Lopez
+                                                </td>
+                                                <td>
+                                                    3983 Harrison Street
+                                                </td>
+                                                <td>
+                                                    San Rafael
+                                                </td>
+                                                <td>
+                                                    CA
+                                                </td>
+                                                <td>
+                                                    94903
+                                                </td>
+                                            </tr>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="99">
+                                                        <button class="btn btn-flat" title="Show More"><span class="ion-more"></span></button>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Toolbar Table</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>Toolbar to be used when when in need of data manipulation through filters or views.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component">
+                                <div class="toolbar">
+                                    <div class="toolbar-filters">
+                                        <ul>
+                                            <li class="ion-android-funnel"></li>
+                                            <li>
+                                                Last Name
+                                                <span class="ion-android-arrow-dropdown"></span>
+                                            </li>
+                                            <li>
+                                                City
+                                                <span class="ion-android-arrow-dropdown"></span>
+                                            </li>
+                                            <li>
+                                                State
+                                                <span class="ion-android-arrow-dropdown"></span>
+                                            </li>
+                                            <li>
+                                                Zip
+                                                <span class="ion-android-arrow-dropdown"></span>
+                                            </li>
+                                            <li class="toolbar-search">
+                                                <div class="ion-search"></div>
+                                                <div class="toolbar-input">
+                                                    <input type="text" value="Filter..." />
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <table class="table">
+                                    <tr>
+                                        <th>
+                                            Name
+                                        </th>
+                                        <th>
+                                            Address
+                                        </th>
+                                        <th class="sort">
+                                            <span class="ion-android-arrow-up"></span>
+                                            City
+                                        </th>
+                                        <th>
+                                            State
+                                        </th>
+                                        <th>
+                                            Zip
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            David L Lopez
+                                        </td>
+                                        <td>
+                                            3983 Harrison Street
+                                        </td>
+                                        <td>
+                                            San Rafael
+                                        </td>
+                                        <td>
+                                            CA
+                                        </td>
+                                        <td>
+                                            94903
+                                        </td>
+                                    </tr>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="99">
+                                                <button class="btn btn-flat" title="Show More"><span class="ion-more"></span></button>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <a name="dialogs"></a>
+                            <h3>Dialogs</h3>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Modal</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>Modal dialog showing text with actionable buttons on the bottom</p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component component-with-dialog">
+                                <div class="dialog">
+                                    <div class="dialog-header">
+                                        <div class="dialog-title">
+                                            Lorem ipsum dolor sit amet
+                                        </div>
+                                    </div>
+                                    <div class="dialog-content">
+                                        <p>Etiam pellentesque pharetra massa, at viverra nibh finibus et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum a arcu sed neque pulvinar interdum.</p>
+                                    </div>
+                                    <div class="dialog-actions">
+                                        <button class="btn btn-flat dialog-close">Cancel</button>
+                                        <button class="btn btn-flat dialog-close">OK</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Informational Dialog</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>Same as a modal dialog but with the dialog beak to draw attention to or from an element on the page.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component component-with-dialog">
+                                <div class="dialog">
+                                    <div class="dialog-beak"></div>
+                                    <div class="dialog-header">
+                                        <div class="dialog-title">
+                                            Hey David...
+                                        </div>
+                                    </div>
+                                    <div class="dialog-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget ipsum luctus neque tempor facilisis ut at nunc. Vestibulum id tempus mauris.</p>
+                                        <p>Fusce facilisis suscipit felis, vel egestas enim ornare non. Phasellus vitae sem eu neque posuere tincidunt. Nunc elementum lectus dolor, sit amet tempus lectus facilisis id.</p>
+                                        <ul class="icon-ul">
+                                            <li class="ion-android-home"></li>
+                                            <li>Suspendisse placerat dui a porta commodo. Integer vulputate scelerisque urna, non volutpat nunc lacinia in.</li>
+                                            <li class="ion-android-cloud"></li>
+                                            <li>Pellentesque id sodales turpis. Morbi pretium nisi mauris, sed egestas sapien volutpat in.</li>
+                                            <li class="ion-android-document"></li>
+                                            <li>Quisque vulputate pellentesque ipsum sed pharetra. Donec est nibh, maximus ac metus vel, commodo vestibulum est.</li>
+                                            <li class="ion-android-person"></li>
+                                            <li>Mauris euismod dui a turpis congue ullamcorper.</li>
+                                            <li class="ion-android-options"></li>
+                                            <li>Morbi aliquam hendrerit feugiat. Donec in congue nibh, a dapibus sapien.</li>
+                                            <li class="ion-android-list"></li>
+                                            <li>Etiam vitae placerat ligula. Aliquam scelerisque diam dolor, ac rhoncus arcu vulputate in. Integer non ornare lectus.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="dialog-actions">
+                                        <button class="btn" title="Got it!">Got it!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Dialog with Avatar</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>Dialog to be used to show profile information of people.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component component-with-dialog">
+                                <div class="dialog dialog-with-avatar">
+                                    <div class="avatar">
+                                        <div class="thumbnail-wrapper circular bordered b-white">
+                                            <div class="thumbnail-div"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dialog-header">
+                                        <div class="dialog-title">
+                                            David L Lopez
+                                        </div>
+                                        <div class="dialog-line-2">
+                                            Account Executive
+                                        </div>
+                                        <div class="dialog-line-3">
+                                            Inside Sales
+                                        </div>
+                                    </div>
+                                    <div class="dialog-toolbar">
+                                        <button class="btn">
+                                            <div class="ion-android-person ion-with-text">View Profile</div>
+                                        </button>
+                                        <button class="btn">
+                                            <div class="ion-social-skype ion-with-text">Call on Skype</div>
+                                        </button>
+                                        <button class="btn">
+                                            <div class="ion-android-mail ion-with-text">Send Email</div>
+                                        </button>
+                                    </div>
+                                    <div class="dialog-content">
+                                        <ul class="icon-ul">
+                                            <li class="ion-android-call"></li>
+                                            <li>+1 (555) 555-5555</li>
+                                            <li class="ion-android-mail"></li>
+                                            <li>davidlopez@contoso.com</li>
+                                        </ul>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, ligula non congue mattis, ligula velit dictum orci, nec maximus nulla nisi vitae leo. Donec ut dolor quis lectus finibus sodales quis sit amet neque. Nam lorem elit, feugiat ac diam id, maximus ullamcorper nisi.
+                                        </p>
+                                        <p>
+                                            Cras a leo tellus. Nullam vel tincidunt arcu. Nunc et ultricies sapien. Morbi nec sem varius, venenatis tortor eu, lacinia lectus. Quisque mattis vel nulla in porttitor.
+                                        </p>
+                                    </div>
+                                    <div class="dialog-actions">
+                                        <button class="btn btn-flat dialog-close">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <a name="grid-list"></a>
+                            <h3>Grid List</h3>
+                            <p>A grid list is best suited to presenting homogenous data, typically images, and is optimized for visual comprehension and differentiating between similar data types.</p>
+                            <p>A grid list consists of a repeated pattern of cells arrayed vertically and horizontally within the grid list.</p>
+                            <p>Tiles hold content and can span one or more cells vertically or horizontally.</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Image Only Tile</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>Grid list with images or icons only.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component">
+                                <div class="grid-list">
+                                    <div class="row">
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/HRr2vgs.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/RRqiCRA.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/70k8wrE.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/WEdq24o.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/Ka36QVP.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/aqOg1Xd.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/lZtQFmr.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/2x5gf0c.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/wMnE2mC.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/TJa6qS5.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/qB3YD00.jpg" />
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/2MkzOtR.jpg" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Single Line Tile</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>Grid list with images or icons and a single line of text or descriptor below.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component">
+                                <div class="grid-list">
+                                    <div class="row">
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white tile-accentColor-blue" href="#">
+                                                <div class="ion-social-facebook"></div>
+                                                <div class="grid-content">
+                                                    <div class="grid-action">
+                                                        <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        Facebook
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white tile-accentColor-blueLight" href="#">
+                                                <div class="ion-social-twitter"></div>
+                                                <div class="grid-content">
+                                                    <div class="grid-action">
+                                                        <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        Twitter
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white tile-accentColor-red" href="#">
+                                                <div class="ion-social-googleplus"></div>
+                                                <div class="grid-content">
+                                                    <div class="grid-action">
+                                                        <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        Google+
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white tile-accentColor-orange" href="#">
+                                                <div class="ion-social-instagram"></div>
+                                                <div class="grid-content">
+                                                    <div class="grid-action">
+                                                        <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        Instagram
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white tile-accentColor-green" href="#">
+                                                <div class="ion-social-whatsapp"></div>
+                                                <div class="grid-content">
+                                                    <div class="grid-action">
+                                                        <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        WhatsApp
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white tile-accentColor-magenta" href="#">
+                                                <div class="ion-social-pinterest"></div>
+                                                <div class="grid-content">
+                                                    <div class="grid-action">
+                                                        <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        Pinterest
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Two Line Tile</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>Grid list with images or icons. Content inside of tiles have two lines of information and various set ups of icons.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component">
+                                <div class="grid-list">
+                                    <div class="row">
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/kDjw0KB.jpg" />
+                                                <div class="grid-content two-lines">
+                                                    <div class="grid-action">
+                                                        <div class="ion-information-circled"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        Asian Pork Jerky
+                                                    </div>
+                                                    <div class="grid-line-2">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/axXH76R.jpg" />
+                                                <div class="grid-content two-lines">
+                                                    <div class="grid-action">
+                                                        <div class="ion-information-circled"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        Mexican Breakfast
+                                                    </div>
+                                                    <div class="grid-line-2">
+                                                        <div class="ion-flag"></div>
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/Pw8lR3V.jpg" />
+                                                <div class="grid-content two-lines">
+                                                    <div class="grid-icon">
+                                                        <div class="ion-android-navigate"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        Sushi
+                                                    </div>
+                                                    <div class="grid-line-2">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/uaQBLrI.jpg" />
+                                                <div class="grid-content two-lines">
+                                                    <div class="grid-title">
+                                                        Blood Orange
+                                                    </div>
+                                                    <div class="grid-line-2">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/TbC7Gof.jpg" />
+                                                <div class="grid-content two-lines">
+                                                    <div class="grid-action">
+                                                        <div class="ion-information-circled"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        Fanesca
+                                                    </div>
+                                                    <div class="grid-line-2">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/srbRSoS.jpg" />
+                                                <div class="grid-content two-lines">
+                                                    <div class="grid-action">
+                                                        <div class="ion-information-circled"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        Chicken, Sausage &amp; Shrimp Jambalaya
+                                                    </div>
+                                                    <div class="grid-line-2">
+                                                        <div class="ion-flag"></div>
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/mau4nWG.jpg" />
+                                                <div class="grid-content two-lines">
+                                                    <div class="grid-icon">
+                                                        <div class="ion-android-navigate"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        Ramen
+                                                    </div>
+                                                    <div class="grid-line-2">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/DJqKStd.jpg" />
+                                                <div class="grid-content two-lines">
+                                                    <div class="grid-title">
+                                                        Rainbow Bagel
+                                                    </div>
+                                                    <div class="grid-line-2">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/WNH1TOS.jpg" />
+                                                <div class="grid-content two-lines">
+                                                    <div class="grid-action">
+                                                        <div class="ion-information-circled"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        Churro &amp; Ice Cream
+                                                    </div>
+                                                    <div class="grid-line-2">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/0jOBZtn.jpg" />
+                                                <div class="grid-content two-lines">
+                                                    <div class="grid-action">
+                                                        <div class="ion-information-circled"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        Blueberry Cupcakes
+                                                    </div>
+                                                    <div class="grid-line-2">
+                                                        <div class="ion-flag"></div>
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/AMYSUi1.jpg" />
+                                                <div class="grid-content two-lines">
+                                                    <div class="grid-icon">
+                                                        <div class="ion-android-navigate"></div>
+                                                    </div>
+                                                    <div class="grid-title">
+                                                        Tomatoes
+                                                    </div>
+                                                    <div class="grid-line-2">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                            <a class="thumbnail-wrapper square bordered b-white" href="#">
+                                                <img src="http://i.imgur.com/WwDRBNb.jpg" />
+                                                <div class="grid-content two-lines">
+                                                    <div class="grid-title">
+                                                        Waffles
+                                                    </div>
+                                                    <div class="grid-line-2">
+                                                        Lorem ipsum dolor sit amet
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <a name="list"></a>
+                            <h3>List</h3>
+                            <p>Collections of list tiles present related content in a consistent format. Lists use hierarchy to prioritize a type or set of content, which helps users find the most important information. For example, in an email inbox app, an avatar and text snippet are emphasized over a time stamp.</p>
+                            <p>List tiles may contain up to three lines of text, and text length may vary between tiles in the same list. To display more than three lines of text, use a card.</p>
+                            <p>Specifications:</p>
+                            <ul>
+                                <li>The majority of space on a list tile should be dedicated to the primary action which is hyperlinked.</li>
+                                <li>Place the most distinguishing content towards the left of the tile.</li>
+                                <li>In tiles with multi-line content, place the most distinguishing content in the first line.</li>
+                                <li>Place supplemental actions on the right side.</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Text Only</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>List of items displayed in tiles.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component">
+                                <div class="row">
+                                    <div class="list">
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="list-body">
+                                                <div class="list-title">Three-line Item</div>
+                                                <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                <div class="list-line">Consectetur adipiscing elit</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="list-body">
+                                                <div class="list-title">Three-line Item</div>
+                                                <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                <div class="list-line">Consectetur adipiscing elit</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="list-body">
+                                                <div class="list-title">Three-line Item</div>
+                                                <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                <div class="list-line">Consectetur adipiscing elit</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="list-body">
+                                                <div class="list-title">Three-line Item</div>
+                                                <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                <div class="list-line">Consectetur adipiscing elit</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="list-body">
+                                                <div class="list-title">Three-line Item</div>
+                                                <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                <div class="list-line">Consectetur adipiscing elit</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="list-body">
+                                                <div class="list-title">Three-line Item</div>
+                                                <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                <div class="list-line">Consectetur adipiscing elit</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Icon with Text</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>List of items displayed in tiles with icon beside them.</p>
+                            <p>Icons can be actionable or passive.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component">
+                                <div class="row">
+                                    <div class="list">
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="ion-android-bookmark"></div>
+                                            <div class="list-body">
+                                                <div class="list-title">Three-line Item</div>
+                                                <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                <div class="list-line">Consectetur adipiscing elit</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="ion-android-bookmark"></div>
+                                            <div class="list-body">
+                                                <div class="list-title">Three-line Item</div>
+                                                <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                <div class="list-line">Consectetur adipiscing elit</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="ion-android-bookmark"></div>
+                                            <div class="list-body">
+                                                <div class="list-title">Three-line Item</div>
+                                                <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                <div class="list-line">Consectetur adipiscing elit</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="ion-android-bookmark"></div>
+                                            <div class="list-body">
+                                                <div class="list-title">Three-line Item</div>
+                                                <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                <div class="list-line">Consectetur adipiscing elit</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="ion-android-bookmark"></div>
+                                            <div class="list-body">
+                                                <div class="list-title">Three-line Item</div>
+                                                <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                <div class="list-line">Consectetur adipiscing elit</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="ion-android-bookmark"></div>
+                                            <div class="list-body">
+                                                <div class="list-title">Three-line Item</div>
+                                                <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                <div class="list-line">Consectetur adipiscing elit</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Avatar with Text</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>List of items in which the primary content is a person with their avatar pictured.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component">
+                                <div class="row">
+                                    <div class="list">
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Avatar with Text and Icon</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>List of items in which the primary content is a person with their avatar pictured.</p>
+                            <p>Contains actionable icon to the right in the secondary content area.</p>
+                            <p>Use single stack list (no columns) for items containing secondary content area (action icon) unless inside of a card.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component">
+                                <div class="row">
+                                    <div class="list">
+                                        <div class="list-item col-sm-12">
+                                            <div class="list-action ion-android-alert"></div>
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12">
+                                            <div class="list-action ion-android-alert"></div>
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12">
+                                            <div class="list-action ion-android-alert"></div>
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12">
+                                            <div class="list-action ion-android-alert"></div>
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12">
+                                            <div class="list-action ion-android-alert"></div>
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-sm-12">
+                                            <div class="list-action ion-android-alert"></div>
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>List with Toolbar</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>List of items which the data can be manipulated by filters.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component">
+                                <div class="row">
+                                    <div class="list">
+                                        <div class="col-sm-12">
+                                            <div class="toolbar">
+                                                <div class="toolbar-filters">
+                                                    <ul>
+                                                        <li class="ion-android-funnel"></li>
+                                                        <li>
+                                                            Last Name
+                                                            <span class="ion-android-arrow-dropdown"></span>
+                                                        </li>
+                                                        <li>
+                                                            Department
+                                                            <span class="ion-android-arrow-dropdown"></span>
+                                                        </li>
+                                                        <li>
+                                                            Office
+                                                            <span class="ion-android-arrow-dropdown"></span>
+                                                        </li>
+                                                        <li class="toolbar-search">
+                                                            <div class="ion-search"></div>
+                                                            <div class="toolbar-input">
+                                                                <input type="text" value="Filter..." />
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                            <div class="avatar">
+                                                <div class="thumbnail-wrapper circular bordered b-white">
+                                                    <div class="thumbnail-div"></div>
+                                                </div>
+                                            </div>
+                                            <div class="list-body">
+                                                <div class="list-title">David L Lopez</div>
+                                                <div class="list-line">Account Executive</div>
+                                                <div class="list-line">Inside Sales</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>List within Card</h4>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <p>List of items inside a card. Same rules apply with these list.</p>
+                            <p>Background is changed to white and contains borders much like a table.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <div class="component">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="card-title">
+                                                    Text Only
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="list">
+                                                    <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                                        <div class="list-body">
+                                                            <div class="list-title">Three-line Item</div>
+                                                            <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                            <div class="list-line">Consectetur adipiscing elit</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                                        <div class="list-body">
+                                                            <div class="list-title">Three-line Item</div>
+                                                            <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                            <div class="list-line">Consectetur adipiscing elit</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                                        <div class="list-body">
+                                                            <div class="list-title">Three-line Item</div>
+                                                            <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                            <div class="list-line">Consectetur adipiscing elit</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                                        <div class="list-body">
+                                                            <div class="list-title">Three-line Item</div>
+                                                            <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                            <div class="list-line">Consectetur adipiscing elit</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                                        <div class="list-body">
+                                                            <div class="list-title">Three-line Item</div>
+                                                            <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                            <div class="list-line">Consectetur adipiscing elit</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                                        <div class="list-body">
+                                                            <div class="list-title">Three-line Item</div>
+                                                            <div class="list-line">Lorem ipsum dolor sit amet</div>
+                                                            <div class="list-line">Consectetur adipiscing elit</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </content>
+            <footer></footer>
+        </main>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://s0.assets-yammer.com/assets/platform_embed.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('.scroll-content').height($('nav').height() - 270);
+                $('#embedded-feed').height($(window).height() - 157);
+
+                $('[data-toggle="tooltip"]').tooltip();
+
+                $('.thumbnail-wrapper > img').each(function () {
+                    var $this = $(this);
+                    var $thisimage = new Image();
+
+                    $thisimage.src = $this.attr("src");
+                    if($thisimage.height > $thisimage.width)
+                        $this.parent().addClass('tall');
+                });
+
+                $('nav ul > li > a').click(function (e) {
+                    $this = $(this);
+                    $parent = $this.parent();
+                    if ($parent.hasClass('open'))
+                        $parent.removeClass('open');
+                    else
+                        $parent.addClass('open');
+				});
+                $('.sidebar-header').click(function () {
+                    $this = $(this);
+                    $parent = $this.parent();
+                    if($parent.hasClass('open')) {
+                        $parent.removeClass('open');
+                    }
+                    else {
+                        $parent.addClass('open');
+                    }
+                });
+
+                yam.connect.embedFeed({
+                    "network": "shi.com",
+                    "feedType": "group",
+                    "feedId": 4776854,
+                    "config": {
+                        "use_sso": true,
+                        "header": false,
+                        "footer": false,
+                        "showOpenGraphPreview": false,
+                        "defaultToCanonical": false,
+                        "hideNetworkName": true
+                    },
+                    "container": "#embedded-feed"
+                });
+            });
+        </script>
+    </body>
+</html>
