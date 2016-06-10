@@ -164,7 +164,7 @@
                 <div class="appbar">
                     <div class="ion-with-text float-r ion-android-happy send-feedback" title="Send Feedback">Send Feedback</div>
                     <div class="ion-android-menu float-l show-nav"></div>
-                    <div class="ion-search float-l"></div>
+                    <div class="ion-android-search float-l"></div>
                     <div class="appbar-text">
                         <input type="text" value="Search..." />
                     </div>
@@ -705,38 +705,41 @@
                         <div class="col-sm-12">
                             <div class="row">
                                 <div class="col-md-12 col-lg-6">
-                                    <div class="card">									
+                                    <div class="card">					
                                         <div class="card-header">
-                                            <div class="card-title">
-                                                <div class="ion-android-apps"></div>
-                                                <div class="card-title-with-icon" title="Recent Files">
-                                                    Recent Files
-                                                </div>
+                                            <div class="card-views">
+                                                <ul>
+                                                    <li class="ion-eye"></li>      
+                                                    <li>
+                                                        All
+                                                        <span class="ion-android-arrow-dropdown"></span>
+                                                    </li>                                                        
+                                                </ul>                                                
+                                            </div>                                                
+                                            <div class="card-title" title="Recent Files">
+                                                Recent Files
                                             </div>
                                         </div>
                                         <div class="card-body">
 											<div class="toolbar">
 												<div class="toolbar-filters">
 													<ul>
-														<li class="ion-android-funnel"></li>  
-														<li>
-															Source
-															<span class="ion-android-arrow-dropdown"></span>
-														</li>                                                               
+														<li class="ion-android-funnel"></li>                                                                 
 														<li>
 															File Type
 															<span class="ion-android-arrow-dropdown"></span>
 														</li>                                                        
 														<li class="toolbar-search">
-															<div class="ion-search"></div>
-															<div class="toolbar-input">
-																<input type="text" value="Filter..." />
-															</div>
+                                                            <div class="chip-container">
+                                                            </div>
 														</li>
 													</ul>
 												</div>
 											</div>                                              
                                             <div class="list">
+                                                <div class="subheader">
+                                                    <div class="subheader-title">Today</div>
+                                                </div>                                                
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
@@ -746,7 +749,6 @@
                                                     <div class="list-body">
                                                         <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                         <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
-                                                        <div class="list-line"><div class="ion-eye"></div>a few seconds ago</div>
                                                     </div>
                                                 </div>
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -758,7 +760,6 @@
                                                     <div class="list-body">
                                                         <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                         <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
-                                                        <div class="list-line"><div class="ion-compose"></div>several days ago</div>
                                                     </div>
                                                 </div>
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -770,7 +771,56 @@
                                                     <div class="list-body">
                                                         <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                         <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
-                                                        <div class="list-line"><div class="ion-compose"></div>several days ago</div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-icon">
+                                                        <div class="thumbnail-wrapper">
+                                                            <div class="thumbnail-div icon-pdf"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Online Document Name">Online Document Name</div>
+                                                        <div class="list-line"><div class="ion-social-google"></div>Google Drive</div>
+                                                    </div>
+                                                </div>                                                
+                                                <div class="subheader">
+                                                    <div class="subheader-title">Yesterday</div>
+                                                </div>       
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-icon">
+                                                        <div class="thumbnail-wrapper">
+                                                            <div class="thumbnail-div icon-pdf"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Online Document Name">Online Document Name</div>
+                                                        <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-icon">
+                                                        <div class="thumbnail-wrapper">
+                                                            <div class="thumbnail-div icon-docx"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Online Document Name">Online Document Name</div>
+                                                        <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
+                                                    </div>
+                                                </div>
+                                                <div class="subheader">
+                                                    <div class="subheader-title">Last Week</div>
+                                                </div>                                                     
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-icon">
+                                                        <div class="thumbnail-wrapper">
+                                                            <div class="thumbnail-div icon-docx"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Online Document Name">Online Document Name</div>
+                                                        <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
                                                     </div>
                                                 </div>
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -782,7 +832,53 @@
                                                     <div class="list-body">
                                                         <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                         <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
-                                                        <div class="list-line"><div class="ion-eye"></div>several days ago</div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-icon">
+                                                        <div class="thumbnail-wrapper">
+                                                            <div class="thumbnail-div icon-pdf"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Online Document Name">Online Document Name</div>
+                                                        <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-icon">
+                                                        <div class="thumbnail-wrapper">
+                                                            <div class="thumbnail-div icon-docx"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Online Document Name">Online Document Name</div>
+                                                        <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
+                                                    </div>
+                                                </div>
+                                                <div class="subheader">
+                                                    <div class="subheader-title">Older</div>
+                                                </div>                                                     
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-icon">
+                                                        <div class="thumbnail-wrapper">
+                                                            <div class="thumbnail-div icon-docx"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Online Document Name">Online Document Name</div>
+                                                        <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-icon">
+                                                        <div class="thumbnail-wrapper">
+                                                            <div class="thumbnail-div icon-pdf"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Online Document Name">Online Document Name</div>
+                                                        <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
                                                     </div>
                                                 </div>                                                
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -794,7 +890,6 @@
                                                     <div class="list-body">
                                                         <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                         <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
-                                                        <div class="list-line"><div class="ion-eye"></div>several days ago</div>
                                                     </div>
                                                 </div>
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -806,9 +901,8 @@
                                                     <div class="list-body">
                                                         <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                         <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
-                                                        <div class="list-line"><div class="ion-compose"></div>several days ago</div>
                                                     </div>
-                                                </div>
+                                                </div>  
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
@@ -818,7 +912,6 @@
                                                     <div class="list-body">
                                                         <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                         <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
-                                                        <div class="list-line"><div class="ion-compose"></div>several days ago</div>
                                                     </div>
                                                 </div>
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -830,108 +923,12 @@
                                                     <div class="list-body">
                                                         <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                         <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
-                                                        <div class="list-line"><div class="ion-eye"></div>several days ago</div>
                                                     </div>
-                                                </div>
-                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                                    <div class="list-icon">
-                                                        <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-pdf"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-body">
-                                                        <div class="list-title" title="Online Document Name">Online Document Name</div>
-                                                        <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
-                                                        <div class="list-line"><div class="ion-eye"></div>several days ago</div>
-                                                    </div>
-                                                </div>
-                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                                    <div class="list-icon">
-                                                        <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-docx"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-body">
-                                                        <div class="list-title" title="Online Document Name">Online Document Name</div>
-                                                        <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
-                                                        <div class="list-line"><div class="ion-compose"></div>several days ago</div>
-                                                    </div>
-                                                </div>
-                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                                    <div class="list-icon">
-                                                        <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-docx"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-body">
-                                                        <div class="list-title" title="Online Document Name">Online Document Name</div>
-                                                        <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
-                                                        <div class="list-line"><div class="ion-compose"></div>several days ago</div>
-                                                    </div>
-                                                </div>
-                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                                    <div class="list-icon">
-                                                        <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-pdf"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-body">
-                                                        <div class="list-title" title="Online Document Name">Online Document Name</div>
-                                                        <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
-                                                        <div class="list-line"><div class="ion-eye"></div>several days ago</div>
-                                                    </div>
-                                                </div>                                                
-                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                                    <div class="list-icon">
-                                                        <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-pdf"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-body">
-                                                        <div class="list-title" title="Online Document Name">Online Document Name</div>
-                                                        <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
-                                                        <div class="list-line"><div class="ion-eye"></div>several days ago</div>
-                                                    </div>
-                                                </div>
-                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                                    <div class="list-icon">
-                                                        <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-docx"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-body">
-                                                        <div class="list-title" title="Online Document Name">Online Document Name</div>
-                                                        <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
-                                                        <div class="list-line"><div class="ion-compose"></div>several days ago</div>
-                                                    </div>
-                                                </div>                                                
+                                                </div>                                                                                                                                                       
                                             </div>
                                         </div>
                                         <div class="card-actions">
-											<div class="paging">
-												<div class="float-r">
-													<span class="paging-info">1-16</span>
-													<button class="btn btn-flat">
-														<span class="ion-chevron-left"></span>
-													</button>													
-													<button class="btn btn-flat">
-														<span class="ion-chevron-right"></span>
-													</button>
-												</div>
-												<div class="float-l">
-													<button class="btn btn-flat btn-active">1</button>
-													<button class="btn btn-flat">2</button>
-													<button class="btn btn-flat">3</button>
-													<button class="btn btn-flat">4</button>
-													<button class="btn btn-flat">5</button>
-													<button class="btn btn-flat">6</button>
-													<button class="btn btn-flat">7</button>
-													<button class="btn btn-flat">
-														&hellip;
-													</button>
-													<button class="btn btn-flat">34</button>
-												</div>
-											</div>
+                                            <button class="btn btn-flat" title="Show More"><span class="ion-more"></span></button>
                                         </div>										
                                     </div>
                                 </div>
@@ -1075,7 +1072,6 @@
                                                 <div class="list-body">
                                                     <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                     <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
-                                                    <div class="list-line"><div class="ion-eye"></div>a few seconds ago</div>
                                                 </div>
                                             </div> 
                                             <div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -1087,7 +1083,6 @@
                                                 <div class="list-body">
                                                     <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                     <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
-                                                    <div class="list-line"><div class="ion-compose"></div>several days ago</div>
                                                 </div>
                                             </div>  
                                             <div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -1098,8 +1093,7 @@
                                                 </div>
                                                 <div class="list-body">
                                                     <div class="list-title" title="Online Document Name">Online Document Name</div>
-                                                    <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
-                                                    <div class="list-line"><div class="ion-eye"></div>a few seconds ago</div>
+                                                    <div class="list-line"><div class="ion-social-google"></div>Google Drive</div>
                                                 </div>
                                             </div> 
                                             <div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -1111,7 +1105,6 @@
                                                 <div class="list-body">
                                                     <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                     <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
-                                                    <div class="list-line"><div class="ion-compose"></div>several days ago</div>
                                                 </div>
                                             </div>                                                                                                                                     
                                         </div>
@@ -1126,29 +1119,21 @@
                             <div class="row">
                                 <div class="col-md-12 col-lg-6">
                                     <div class="card">
-                                        <div class="card-header">                                          
+                                        <div class="card-header">      
+                                            <div class="card-views">
+                                                <ul>
+                                                    <li class="ion-eye"></li>      
+                                                    <li>
+                                                        All
+                                                        <span class="ion-android-arrow-dropdown"></span>
+                                                    </li>                                                        
+                                                </ul>                                                
+                                            </div>                                                                                
                                             <div class="card-title" title="Groups">
                                                 Groups
                                             </div>
                                         </div>
-                                        <div class="card-body">
-											<div class="toolbar">
-												<div class="toolbar-filters">
-													<ul>
-														<li class="ion-android-funnel"></li>      
-														<li>
-															Group Type
-															<span class="ion-android-arrow-dropdown"></span>
-														</li>                                                        
-														<li class="toolbar-search">
-															<div class="ion-search"></div>
-															<div class="toolbar-input">
-																<input type="text" value="Filter..." />
-															</div>
-														</li>
-													</ul>
-												</div>
-											</div>                                            
+                                        <div class="card-body">                                          
                                             <div class="list">
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-action ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Follow"></div>
@@ -1599,7 +1584,7 @@
 							<div class="row">
 								<div class="col-md-12 col-lg-9">
                                     <div class="card">
-										<div class="card-header">
+										<div class="card-header">                                            
 											<div class="card-title" title="Apps">
 												Apps
 											</div>
@@ -2038,19 +2023,6 @@
 								<div class="col-md-12 col-lg-9">
 									<div class="card">
 										<div class="card-header">
-                                            <div class="card-views">
-                                                <div class="chip-container">
-                                                    <div class="chip chip-with-icon">
-                                                        <div class="ion-android-cancel float-r"></div>
-                                                        <div class="chip-icon float-l">
-                                                            <div class="thumbnail-wrapper chip-letter circular tile-accentColor-blueLight">
-                                                                <span>L</span>
-                                                            </div>
-                                                        </div>
-                                                        <span>Last Name</span>
-                                                    </div>											
-                                                </div>                                                
-                                            </div>
 											<div class="card-title" title="People">
 												People
 											</div>
@@ -2073,10 +2045,30 @@
 															<span class="ion-android-arrow-dropdown"></span>
 														</li>
 														<li class="toolbar-search">
-															<div class="ion-search"></div>
-															<div class="toolbar-input">
-																<input type="text" value="Filter..." />
-															</div>
+                                                            <div class="chip-container">
+                                                                <div class="chip chip-with-icon">
+                                                                    <div class="ion-android-cancel float-r"></div>
+                                                                    <div class="chip-icon float-l">
+                                                                        <div class="thumbnail-wrapper chip-letter circular tile-accentColor-blueLight">
+                                                                            <span>L</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <span>Last Name</span>
+                                                                </div>	
+                                                                <div class="chip">
+                                                                    <div class="ion-android-cancel float-r"></div>
+                                                                    <span>Inside Sales</span>
+                                                                </div>	   
+                                                                <div class="chip chip-with-icon">
+                                                                    <div class="ion-android-cancel float-r"></div>
+                                                                    <div class="chip-icon float-l">
+                                                                        <div class="thumbnail-wrapper chip-letter circular tile-accentColor-purple">
+                                                                            <span class="ion-android-search"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <span>Last Name</span>
+                                                                </div>                                                                                                                             										
+                                                            </div>
 														</li>
 													</ul>
 												</div>
