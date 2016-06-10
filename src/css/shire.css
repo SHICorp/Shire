@@ -32,6 +32,7 @@ body {
 }
 *[class*="ion-"].ion-with-text:before {
     margin-right: 8px;
+    font-size: 18px !important;
 }
 *.ion-active[class*="ion"]:before {
 	color: #ffb900 !important;
@@ -72,6 +73,18 @@ content p {
 }
 content ul > li {
     padding: 4px 0;
+}
+content .page-content {
+    overflow: hidden;
+}
+.social-feed {
+    width: 250px;
+    margin-left: 30px;
+    float: right;
+    display: none;
+}
+.home {
+    overflow: hidden;
 }
 
 /* DESIGN DOCUMENT STYLES */
@@ -180,6 +193,19 @@ nav .open ul.sub-menu {
 nav .profile {
     position: relative;
 }
+nav .profile-toolbar {
+    position: absolute;
+    width: 100%;
+    background: -moz-linear-gradient(top, rgba(2,0,0,0.3333) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(2,0,0,0.3333) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(2,0,0,0.3333) 0%,rgba(0,0,0,0) 100%);    
+}
+nav .profile-toolbar .btn *[class*="ion-"]:before {
+    color: #fff;
+}
+nav .profile-toolbar .btn:active, nav .profile-toolbar .btn:focus {
+    background: transparent;
+}
 nav .profile .btn-float {
     position: absolute;
     top: 10px;
@@ -221,8 +247,11 @@ header {
     border-right: none;
 }
 .appbar *[class*="ion-"] {
-    padding: 10px 17px;
+    padding: 8px 15px;
     text-align: center;
+}
+.appbar *[class*="ion-"]:before {
+    font-size: 24px;
 }
 .appbar-text {
     overflow: hidden;
@@ -513,14 +542,6 @@ button:focus, .btn:focus {
 .card .chip-container {
 	margin-bottom: 0;
 }
-@media (min-width: 992px) {
-    .toolbar-filters > ul > li {
-        display: block;
-    }
-    .toolbar-filters > ul > li:hover {
-        cursor: pointer;
-    }
-}
 .toolbar-filters *[class*="ion-"]:before {
     font-size: 14px;
     color: #262d40;
@@ -603,7 +624,6 @@ button:focus, .btn:focus {
 }
 .card-actions {
     overflow: hidden;
-    border-top: solid 1px #e9e9e9;
     background: #fff;
     color: #4791d2;
     padding: 5px 5px 5px 10px;
@@ -818,16 +838,81 @@ button:focus, .btn:focus {
     padding: 12px;
     margin-bottom: 0;
 }
+.card .list-item:hover {
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .card div.col-xs-6.list-item {
+        border-right: solid 1px #e9e9e9;
+    }   
+    .card div.col-xs-6.list-item:nth-of-type(2n) {
+        border-right: none;
+    }         
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .card div.col-sm-6.list-item {
+        border-right: solid 1px #e9e9e9;
+    }
+    .card div.col-sm-6.list-item:nth-of-type(2n) {
+        border-right: none;
+    }  
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .card div.col-md-6.list-item {
+        border-right: solid 1px #e9e9e9;
+    }
+    .card div.col-md-6.list-item:nth-of-type(2n) {
+        border-right: none;
+    }  
+    .card div.col-md-4.list-item {
+        border-right: solid 1px #e9e9e9;
+    }
+    .card div.col-md-4.list-item:nth-of-type(3n) {
+        border-right: none;
+    }     
+    .card div.col-md-3.list-item {
+        border-right: solid 1px #e9e9e9;
+    }
+    .card div.col-md-3.list-item:nth-of-type(4n) {
+        border-right: none;
+    }        
+}
+@media (min-width: 1200px) {
+    .card div.col-lg-6.list-item {
+        border-right: solid 1px #e9e9e9;
+    }
+    .card div.col-lg-6.list-item:nth-of-type(2n) {
+        border-right: none;
+    }  
+    .card div.col-lg-4.list-item {
+        border-right: solid 1px #e9e9e9;
+    }
+    .card div.col-lg-4.list-item:nth-of-type(3n) {
+        border-right: none;
+    }  
+    .card div.col-lg-3.list-item {
+        border-right: solid 1px #e9e9e9;
+    }
+    .card div.col-lg-3.list-item:nth-of-type(4n) {
+        border-right: none;
+    }  
+    .card div.col-lg-2.list-item {
+        border-right: solid 1px #e9e9e9;
+    }
+    .card div.col-lg-2.list-item:nth-of-type(6n) {
+        border-right: none;
+    }  
+    .card div.col-lg-1.list-item {
+        border-right: solid 1px #e9e9e9;
+    }
+    .card div.col-lg-1.list-item:nth-of-type(12n) {
+        border-right: none;
+    }                  
+}
 .card .list .subheader {
     background: #f2f2f2;
     border-bottom: solid 1px #e9e9e9;
     clear: left;
-}
-.card .list-item:hover {
-    cursor: pointer;
-}
-.card .list-item:last-child {
-    border-bottom: none;
 }
 .card .card-header .avatar .thumbnail-wrapper {
     width: 36px;
@@ -849,20 +934,23 @@ button:focus, .btn:focus {
     float: left;
     font-size: 13px;
     padding: 6px 10px 5px 10px;
-    min-width: 100px;
+    min-width: 150px;
     line-height: 18px;
     cursor: pointer;
+    color: #262d40;
+    border: solid 1px #e9e9e9;
 }
 .card-views > ul > li:active {
     background: #f2f2f2;
 }
 .card-views > ul > li:first-child {
     cursor: default;
-    padding: 3px 2px 2px 2px;
+    padding: 3px 5px 2px 0;
     min-width: auto;
+    border: none;
 }
 .card-views > ul > *[class*="ion-"]:first-child:before {
-    color: #4791d2;
+    color: #262d40;
     font-size: 24px;
 }
 .card-views > ul > li:hover:first-child {
@@ -878,6 +966,7 @@ button:focus, .btn:focus {
 }
 .card-views > ul > li *[class*="ion-"]:before {
     line-height: 18px;
+    color: #4791d2;
 }
 .card .chip-container {
     padding: 6px;
@@ -889,95 +978,6 @@ button:focus, .btn:focus {
 }
 .paging .paging-info {
 	color: #262d40;
-}
-@media (max-width: 767px) {
-    .card .col-xs-6.list-item {
-        border-left: solid 1px #dfdfdf;
-    }
-    .card .col-xs-6.list-item:nth-child(2n+1) {
-        border-left: none;
-    }
-    .card .col-xs-6.list-item:nth-last-child(-n+2) {
-        border-bottom: none;
-    }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-    .card .col-sm-6.list-item {
-        border-left: solid 1px #dfdfdf;
-    }
-    .card .col-sm-6.list-item:nth-child(2n+1) {
-        border-left: none;
-    }
-    .card .col-sm-6.list-item:nth-last-child(-n+2) {
-        border-bottom: none;
-    }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-    .card .col-md-6.list-item {
-        border-left: solid 1px #dfdfdf;
-    }
-    .card .col-md-6.list-item:nth-child(2n+1) {
-        border-left: none;
-    }
-    .card .col-md-6.list-item:nth-last-child(-n+2) {
-        border-bottom: none;
-    }
-    .card .col-md-4.list-item {
-        border-left: solid 1px #dfdfdf;
-    }
-    .card .col-md-4.list-item:nth-child(3n+1) {
-        border-left: none;
-    }
-    .card .col-md-4.list-item:nth-last-child(-n+3) {
-        border-bottom: none;
-    }
-    .card .col-md-3.list-item {
-        border-left: solid 1px #dfdfdf;
-    }
-    .card .col-md-3.list-item:nth-child(4n+1) {
-        border-left: none;
-    }
-    .card .col-md-3.list-item:nth-last-child(-n+4) {
-        border-bottom: none;
-    }
-}
-@media (min-width: 1200px) {
-    .card .col-lg-6.list-item {
-        border-left: solid 1px #dfdfdf;
-    }
-    .card .col-lg-6.list-item:nth-child(2n+1) {
-        border-left: none;
-    }
-    .card .col-lg-6.list-item:nth-last-child(-n+2) {
-        border-bottom: none;
-    }
-    .card .col-lg-4.list-item {
-        border-left: solid 1px #dfdfdf !important;
-    }
-    .card .col-lg-4.list-item:nth-child(3n+1) {
-        border-left: none !important;
-    }
-    .card .col-lg-4.list-item:nth-last-child(-n+3) {
-        border-bottom: none;
-    }
-    .card .col-lg-3.list-item {
-        border-left: solid 1px #dfdfdf;
-    }
-    .card .col-lg-3.list-item:nth-child(4n+1) {
-        border-left: none;
-    }
-    .card .col-lg-3.list-item:nth-last-child(-n+4) {
-        border-bottom: none;
-    }
-    .card .col-lg-2.list-item {
-        border-left: solid 1px #dfdfdf;
-    }
-    .card .col-lg-2.list-item:nth-child(6n+1) {
-        border-left: none;
-    }
-    .card .col-lg-2.list-item:nth-last-child(-n+6) {
-        border-bottom: none;
-    }
 }
 
 /* CHIPS */
@@ -1601,14 +1601,15 @@ button:focus, .btn:focus {
 
 /* Media Queries */
 @media (min-width: 992px) {
+    .social-feed {
+        display: block;
+    }    
     .sidebar {
         display: block;
     }
     content {
         right: 0;
     }
-}
-@media (min-width: 768px) {
     nav {
         display: block;
     }
@@ -1621,5 +1622,16 @@ button:focus, .btn:focus {
     header {
         position: fixed;
         left: 250px;
+    }
+    .toolbar-filters > ul > li {
+        display: block;
+    }
+    .toolbar-filters > ul > li:hover {
+        cursor: pointer;
+    }    
+}
+@media (min-width: 1199px) {
+    .social-feed {
+        width: 400px;
     }
 }
