@@ -3,16 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Start Screen Design</title>
-        <link type="text/css" rel="stylesheet" href="css\bootstrap.min.css" />
-        <link type="text/css" rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
-        <link type="text/css" rel="stylesheet" href="css\scrollbar.css" />
-        <link type="text/css" rel="stylesheet" href="css\shire.css" />
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/ionicons.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/scrollbar.css" />
+        <link type="text/css" rel="stylesheet" href="css/shire.css" />
     </head>
     <body>
         <nav>
             <div class="profile">
                 <button class="btn btn-float"><span class="ion-compose"></span>Change</button>
-                <img src="samples\avatar.png" width="250" />
+                <img src="samples/avatar.png" width="250" />
             </div>
             <div class="scroll-wrapper">
                 <ul class="nav-items scroll-content">
@@ -33,6 +33,38 @@
                             <div class="ion-android-people nav-icon"></div>
                             <div class="nav-title">Groups</div>
                         </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Teams</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Projects</div>
+                                </a>
+                            </li>      
+                            <li>
+                                <a href="#">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Communities</div>
+                                </a>
+                            </li>    
+                            <li>
+                                <a href="#">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Office 365 Groups</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="nav-icon"></div>
+                                    <div class="nav-title">Document Centers</div>
+                                </a>
+                            </li>                                                                                                      
+                        </ul>                        
                     </li>
                     <li>
                         <a href="#apps">
@@ -217,7 +249,9 @@
 														<div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
 															<div class="list-action ion-compose" data-toggle="tooltip" data-placement="left" title="Edited several days ago"></div>
 															<div class="list-icon">
-																<img src="img\word.png" />
+																<div class="thumbnail-wrapper">
+                                                                    <div class="thumbnail-div icon-docx"></div>
+                                                                </div>
 															</div>
 															<div class="list-body">
 																<div class="list-title" title="Online Document Name">Online Document Name</div>
@@ -325,7 +359,7 @@
 														<div class="row">
 															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
 																<a class="thumbnail-wrapper square bordered b-white" href="#">
-																	<img src="samples\city1.jpg" />
+																	<img src="samples/city1.jpg" />
 																	<div class="grid-content">
 																		<div class="grid-action">
 																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
@@ -338,7 +372,7 @@
 															</div>
 															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
 																<a class="thumbnail-wrapper square bordered b-white" href="#">
-																	<img src="samples\city4.jpg" />
+																	<img src="samples/city4.jpg" />
 																	<div class="grid-content">
 																		<div class="grid-action">
 																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
@@ -351,7 +385,7 @@
 															</div>
 															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
 																<a class="thumbnail-wrapper square bordered b-white" href="#">
-																	<img src="samples\city7.jpg" />
+																	<img src="samples/city7.jpg" />
 																	<div class="grid-content">
 																		<div class="grid-action">
 																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
@@ -364,7 +398,7 @@
 															</div>
 															<div class="grid-item col-xs-6 col-sm-6 col-md-4 col-lg-3">
 																<a class="thumbnail-wrapper square bordered b-white" href="#">
-																	<img src="samples\city8.jpg" />
+																	<img src="samples/city8.jpg" />
 																	<div class="grid-content">
 																		<div class="grid-action">
 																			<div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
@@ -689,7 +723,304 @@
 						</div>
 						<div class="col-sm-12">
 							<a name="groups"></a><hr></hr>
-						</div>						
+						</div>				
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="card">
+                                        <div class="card-header">
+											<div class="card-views">
+												<div class="paging">
+													<span class="paging-info">1-16</span>
+													<button class="btn btn-flat">
+														<span class="ion-chevron-left"></span>
+													</button>													
+													<button class="btn btn-flat">
+														<span class="ion-chevron-right"></span>
+													</button>
+												</div>
+											</div>                                            
+                                            <div class="card-title" title="All Groups">
+                                                Groups
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+											<div class="toolbar">
+												<div class="toolbar-filters">
+													<ul>
+														<li class="ion-android-funnel"></li>
+														<li class="toolbar-search">
+															<div class="ion-search"></div>
+															<div class="toolbar-input">
+																<input type="text" value="Filter..." />
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>                                            
+                                            <div class="list">
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city3.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Project Site</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city5.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Team Site</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>  
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city1.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Office 365 Group</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city4.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Community</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>   
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city2.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Team Site</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city7.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Team Site</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>    
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city6.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Document Center</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city1.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Office 365 Group</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>  
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city2.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Office 365 Group</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city8.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Project Site</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city7.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Team Site</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>    
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city6.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Project Site</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>   
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city3.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Office 365 Group</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city5.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Office 365 Group</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>  
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city1.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Team Site</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="list-action ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                    <div class="list-image">
+                                                        <div class="thumbnail-wrapper square tile-accentColor-blue">
+                                                            <img src="samples/city4.jpg" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-body">
+                                                        <div class="list-title" title="Not Started Task">Community</div>
+                                                        <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                    </div>
+                                                </div>                                                                        
+                                            </div>
+                                        </div>
+                                        <div class="card-actions">
+											<div class="paging">
+												<div class="float-r">
+													<span class="paging-info">1-16</span>
+													<button class="btn btn-flat">
+														<span class="ion-chevron-left"></span>
+													</button>													
+													<button class="btn btn-flat">
+														<span class="ion-chevron-right"></span>
+													</button>
+												</div>
+												<div class="float-l">
+													<button class="btn btn-flat btn-active">1</button>
+													<button class="btn btn-flat">2</button>
+													<button class="btn btn-flat">3</button>
+													<button class="btn btn-flat">4</button>
+													<button class="btn btn-flat">5</button>
+													<button class="btn btn-flat">6</button>
+													<button class="btn btn-flat">7</button>
+													<button class="btn btn-flat">
+														&hellip;
+													</button>
+													<button class="btn btn-flat">34</button>
+												</div>
+											</div>
+                                        </div>																																		
+                                    </div>	
+                                </div>
+                                <div class="col-md-12 col-lg-3">
+                                    <h3>Favorites</h3>
+                                    <div class="row">
+                                        <div class="list">
+                                            <div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                <div class="list-action ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                <div class="list-image">
+                                                    <div class="thumbnail-wrapper square bordered b-white tile-accentColor-blue">
+                                                        <img src="samples/city3.jpg" />
+                                                    </div>
+                                                </div>
+                                                <div class="list-body">
+                                                    <div class="list-title" title="Not Started Task">Project Site</div>
+                                                    <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                </div>
+                                            </div>
+                                        </div>           
+                                    </div>                         
+                                </div>
+                                <div class="col-md-12 col-lg-3">
+                                    <h3>Popular</h3>
+                                    <div class="row">
+                                        <div class="list">
+                                            <div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                <div class="list-action ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                <div class="list-image">
+                                                    <div class="thumbnail-wrapper square bordered b-white tile-accentColor-blue">
+                                                        <img src="samples/city3.jpg" />
+                                                    </div>
+                                                </div>
+                                                <div class="list-body">
+                                                    <div class="list-title" title="Not Started Task">Project Site</div>
+                                                    <div class="list-line"><div class="ion-social-windows"></div>SharePoint</div>
+                                                </div>
+                                            </div>
+                                        </div>           
+                                    </div>                                      
+                                </div>
+                            </div>
+                        </div>		
 						<div class="col-sm-12">
 							<a name="apps"></a><hr></hr>
 						</div>
@@ -814,7 +1145,7 @@
                                                             <div class="ion-social-facebook"></div>
                                                             <div class="grid-content">
                                                                 <div class="grid-action">
-                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                    <div class="ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
                                                                 </div>
                                                                 <div class="grid-title" title="Facebook">
                                                                     Facebook
@@ -866,7 +1197,7 @@
                                                             <div class="ion-social-whatsapp"></div>
                                                             <div class="grid-content">
                                                                 <div class="grid-action">
-                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                    <div class="ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
                                                                 </div>
                                                                 <div class="grid-title" title="WhatsApp">
                                                                     WhatsApp
@@ -975,25 +1306,90 @@
                                                             <div class="ion-social-html5"></div>
                                                             <div class="grid-content">
                                                                 <div class="grid-action">
-                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                    <div class="ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
                                                                 </div>
                                                                 <div class="grid-title" title="Facebook">
                                                                     HTML 5
                                                                 </div>
                                                             </div>
                                                         </a>
-                                                    </div>												
+                                                    </div>	
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-blueLight" href="#">
+                                                            <div class="ion-social-css3"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Facebook">
+                                                                    CSS 3
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>	  
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-magenta" href="#">
+                                                            <div class="ion-social-javascript"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Facebook">
+                                                                    JavaScript
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>	
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-redDark" href="#">
+                                                            <div class="ion-social-angular"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Facebook">
+                                                                    Angular
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>	
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-blueMid" href="#">
+                                                            <div class="ion-social-nodejs"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Facebook">
+                                                                    Node JS
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>	
+                                                    <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                                        <a class="thumbnail-wrapper square bordered b-white tile-accentColor-purple" href="#">
+                                                            <div class="ion-social-sass"></div>
+                                                            <div class="grid-content">
+                                                                <div class="grid-action">
+                                                                    <div class="ion-android-star" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+                                                                </div>
+                                                                <div class="grid-title" title="Facebook">
+                                                                    Sass
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>                                                                                                                                                                                                              											
 												</div>
                                             </div>
                                         </div>
                                     </div>								
 								</div>
 								<div class="col-md-12 col-lg-3">
-									<h3>Favorite Apps</h3>
+									<h3>Favorites</h3>
 									<div class="row">
 										<div class="list">
 											<div class="list-item single col-sm-12">
-												<div class="list-action ion-android-star ion-active"></div>
+												<div class="list-action ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
 												<div class="list-image">
 													<div class="thumbnail-wrapper square bordered b-white tile-accentColor-blue">
 														<div class="ion-social-facebook"></div>
@@ -1003,6 +1399,61 @@
 													<div class="list-title">Facebook</div>
 												</div>
 											</div>
+											<div class="list-item single col-sm-12">
+												<div class="list-action ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+												<div class="list-image">
+													<div class="thumbnail-wrapper square bordered b-white tile-accentColor-green">
+														<div class="ion-social-whatsapp"></div>
+													</div>
+												</div>
+												<div class="list-body">
+													<div class="list-title">WhatsApp</div>
+												</div>
+											</div>                                                
+											<div class="list-item single col-sm-12">
+												<div class="list-action ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+												<div class="list-image">
+													<div class="thumbnail-wrapper square bordered b-white tile-accentColor-orangeLight">
+														<div class="ion-social-html5"></div>
+													</div>
+												</div>
+												<div class="list-body">
+													<div class="list-title">HTML 5</div>
+												</div>
+											</div>
+											<div class="list-item single col-sm-12">
+												<div class="list-action ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+												<div class="list-image">
+													<div class="thumbnail-wrapper square bordered b-white tile-accentColor-blueLight">
+														<div class="ion-social-css3"></div>
+													</div>
+												</div>
+												<div class="list-body">
+													<div class="list-title">CSS 3</div>
+												</div>
+											</div>
+											<div class="list-item single col-sm-12">
+												<div class="list-action ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+												<div class="list-image">
+													<div class="thumbnail-wrapper square bordered b-white tile-accentColor-magenta">
+														<div class="ion-social-javascript"></div>
+													</div>
+												</div>
+												<div class="list-body">
+													<div class="list-title">JavaScript</div>
+												</div>
+											</div>
+											<div class="list-item single col-sm-12">
+												<div class="list-action ion-android-star ion-active" data-toggle="tooltip" data-placement="left" title="Favorite"></div>
+												<div class="list-image">
+													<div class="thumbnail-wrapper square bordered b-white tile-accentColor-redDark">
+														<div class="ion-social-angular"></div>
+													</div>
+												</div>
+												<div class="list-body">
+													<div class="list-title">Angular</div>
+												</div>
+											</div>                                                                                                                                                                                                                        
 										</div>
 									</div>								
 								</div>
@@ -1027,8 +1478,8 @@
 													</button>
 												</div>
 											</div>
-											<div class="card-title" title="Directory">
-												Directory
+											<div class="card-title" title="People">
+												People
 											</div>
 										</div>
 										<div class="card-body">
@@ -1299,7 +1750,7 @@
 													</button>
 												</div>
 												<div class="float-l">
-													<button class="btn btn-flat">1</button>
+													<button class="btn btn-flat btn-active">1</button>
 													<button class="btn btn-flat">2</button>
 													<button class="btn btn-flat">3</button>
 													<button class="btn btn-flat">4</button>
@@ -1639,7 +2090,7 @@
                                         <div class="ion-android-cancel float-r"></div>
                                         <div class="chip-icon float-l">
                                             <div class="thumbnail-wrapper circular">
-                                                <img src="samples\avatar.png" />
+                                                <img src="samples/avatar.png" />
                                             </div>
                                         </div>
                                         <span>Example Chip</span>
@@ -3263,9 +3714,12 @@
         <script type="text/javascript">
             $(function () {
                 $('.scroll-content').height($('nav').height() - 270);
+
                 $('#embedded-feed').height($(window).height() - 157);
 
                 $('[data-toggle="tooltip"]').tooltip();
+
+                resizeGridItems();
 
                 $('.thumbnail-wrapper > img').each(function () {
                     var $this = $(this);
@@ -3284,6 +3738,7 @@
                     else
                         $parent.addClass('open');
 				});
+
                 $('.sidebar-header').click(function () {
                     $this = $(this);
                     $parent = $this.parent();
@@ -3309,7 +3764,20 @@
                     },
                     "container": "#embedded-feed"
                 });
+
+                $(window).resize(function() {
+                    resizeGridItems();
+                });
             });
+            function resizeGridItems() {
+                $('.grid-item > .thumbnail-wrapper').each(function() {
+                    $this = $(this);
+                    $width = $this.width();
+                    $parent = $this.parent();
+                    if($width < 120) $parent.addClass('smaller');
+                    if($width >= 120) $parent.removeClass('smaller');                  
+                });                
+            }
         </script>
     </body>
 </html>
