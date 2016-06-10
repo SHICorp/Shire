@@ -20,6 +20,7 @@
             "externalConsole": false,
             "sourceMaps": false,
             "outDir": null
+<<<<<<< HEAD
         },
         {
             "name": "Attach",
@@ -32,6 +33,8 @@
             "outDir": null,
             "localRoot": "${workspaceRoot}",
             "remoteRoot": null
+=======
+>>>>>>> f9e0b3d9df5ca953f7944b6b2de0bb01f7e1baf8
         }
     ]
 }
