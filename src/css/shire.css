@@ -512,8 +512,6 @@ button:focus, .btn:focus {
 }
 .card .chip-container {
 	margin-bottom: 0;
-	border-top: solid 1px #dfdfdf;
-	
 }
 @media (min-width: 992px) {
     .toolbar-filters > ul > li {
@@ -739,7 +737,10 @@ button:focus, .btn:focus {
 	padding-bottom: 0;
 	padding-left: 0;
 	padding-right: 0;
-	padding-top: 16px;
+	padding-top: 14px;
+}
+.list-image .thumbnail-wrapper.bordered > *[class*="ion-"] {
+    padding-top: 9px;
 }
 .list-image .thumbnail-wrapper {
 	padding-top: 50px;
@@ -747,12 +748,10 @@ button:focus, .btn:focus {
 .list-image .thumbnail-wrapper.bordered {
 	padding-top: 42px;
 }
-.list-image .thumbnail-wrapper.bordered > *[class*="ion-"] {
-	padding-top: 12px;
-}
 .list-image .thumbnail-wrapper > *[class*="ion-"]:before {
 	color: #fff;
-	font-size: 18px;
+	font-size: 24px;
+    line-height: 24px;
 }
 .list-item.single > .list-action[class*="ion-"]:before,
 .list-item.single > .list-body .list-title {
@@ -835,10 +834,12 @@ button:focus, .btn:focus {
 }
 .card-views {
 	float: right;
+    margin-left: 12px;
 }
 .card-header .card-views *[class*="ion-"] {
 	padding: 0;
 	margin-right: 0;
+    float: right;
 }
 .paging .paging-info {
 	color: #262d40;
@@ -994,10 +995,6 @@ button:focus, .btn:focus {
 }
 .chip .thumbnail-wrapper > img {
     width: 100%;
-}
-.card .chip-container {
-	padding: 4px 15px;
-	background: #f5f5f5;
 }
 
 /* Dialogs */
