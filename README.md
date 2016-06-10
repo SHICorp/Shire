@@ -11,6 +11,7 @@ dist
 ## Dependencies
 1. jQuery
 1. Bootstrap (CSS & Javascript)
+1. Yammer Embed 
 1. Ion Icons (CSS & Fonts)
 
 ## Running documentation locally
