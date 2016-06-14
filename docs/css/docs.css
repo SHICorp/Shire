@@ -1,0 +1,23 @@
+/* DESIGN DOCUMENT STYLES */
+.component {
+    background: #f2f2f2;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+.component.component-with-dialog {
+    background: rgba(0,0,0,0.25);
+}
+.component-title {
+    margin-top: 20px;
+    font-size: 16px;
+}
+.component > .menu {
+    display: inline-block;
+    position: initial;
+}
+.person {
+    background-image: url('../img/person.png');
+}
