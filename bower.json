@@ -1,6 +1,5 @@
 {
   "name": "shi.shire",
-  "version": "0.0.1",
   "description": "Responsive front-end framework developed by SHI Corp.",
   "main": "src/css/shire.css",
   "authors": [
