@@ -1,0 +1,29 @@
+{
+  "name": "SHI.Shire",
+  "description": "Responsive front-end framework developed by SHI Corp.",
+  "main": "src/css/shire.css",
+  "authors": [
+    "Nick Rassette <nick_rassette@shi.com>",
+    "Cory Peters <cory_peters@shi.com>",
+  ],
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "framework",
+    "javascript",
+    "front-end",
+    "responsive"
+  ],  
+  "homepage": "https://github.com/SHICorp/Shire",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/SHICorp/Shire.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
