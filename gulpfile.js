@@ -18,10 +18,15 @@ gulp.task('minifyCss', function () {
         .pipe(gulp.dest('./dist/css'));
 });
 
+gulp.task('copyFonts', function () {
+    return gulp.src('./src/fonts/*.*')
+        .pipe(gulp.dest('./dist/fonts'));
+});
+
 gulp.task('clean', function () {
     del.sync(['./dist/**/*', './dist/*'], { force: true });
 });
 
-gulp.task('build', ['clean', 'minifyJavaScript', 'minifyCss']);
+gulp.task('build', ['clean', 'minifyJavaScript', 'minifyCss', 'copyFonts']);
 
 gulp.task('default', ['build']);
