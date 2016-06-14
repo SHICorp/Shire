@@ -1,5 +1,5 @@
 {
-  "name": "SHI.Shire",
+  "name": "shi.shire",
   "version": "0.0.1",
   "description": "Responsive front-end framework developed by SHI Corp.",
   "main": "src/css/shire.css",
@@ -14,7 +14,7 @@
     "javascript",
     "front-end",
     "responsive"
-  ],  
+  ],
   "homepage": "https://github.com/SHICorp/Shire",
   "repository": {
     "type": "git",
@@ -25,6 +25,12 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
-  ]
+    "tests",
+    ".vscode"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "Ionicons": "ionicons#^2.0.1",
+    "jquery": "1.9.1 - 2"
+  }
 }
