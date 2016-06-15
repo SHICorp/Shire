@@ -3,6 +3,14 @@ var del = require('del');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var minifyCss = require('gulp-minify-css');
+var less = require('gulp-less');
+var rename = require('gulp-rename');
+
+gulp.task('compileLess', function() {
+    return gulp.src('./src/less/**/*.less')
+        .pipe(less())
+        .pipe(gulp.dest('./dist/css'));
+});
 
 gulp.task('minifyJavaScript', function () {
     return gulp.src('./src/js/*.js')
@@ -11,8 +19,13 @@ gulp.task('minifyJavaScript', function () {
         .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('minifyCss', function () {
-    return gulp.src('./src/css/*.css')
+var minificationCssFiles = [
+    '!/dist/css/*.min.css',
+    './dist/css/**/*.css'
+];
+
+gulp.task('minifyCss', ['compileLess'], function () {
+    return gulp.src(minificationCssFiles)
         .pipe(minifyCss())
         .pipe(concat('shire.min.css'))
         .pipe(gulp.dest('./dist/css'));
