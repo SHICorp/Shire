@@ -4,7 +4,8 @@
   "main": "src/css/shire.css",
   "authors": [
     "Nick Rassette <nick_rassette@shi.com>",
-    "Cory Peters <cory_peters@shi.com>"
+    "Cory Peters <cory_peters@shi.com>",
+    "David Hill <david_hill@shi.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -25,7 +26,12 @@
     "bower_components",
     "test",
     "tests",
-    ".vscode"
+    ".vscode",
+    "src",
+    "docs",
+    "gulpfile.js",
+    "package.json",
+    "app.js"
   ],
   "dependencies": {
     "bootstrap": "^3.3.6",
