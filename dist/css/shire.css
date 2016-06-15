@@ -1615,7 +1615,7 @@ button:focus,
   padding: 10px 0;
   overflow: visible;
 }
-.menu .list > list.action {
+.menu .list > .list-action {
   float: right;
 }
 .menu .list > .list-item {

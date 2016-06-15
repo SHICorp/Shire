@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var del = require('del');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
-var minifyCss = require('gulp-minify-css');
+var cleanCss = require('gulp-clean-css');
 var less = require('gulp-less');
 var rename = require('gulp-rename');
 
@@ -26,7 +26,7 @@ var minificationCssFiles = [
 
 gulp.task('minifyCss', ['compileLess'], function () {
     return gulp.src(minificationCssFiles)
-        .pipe(minifyCss())
+        .pipe(cleanCss({compatibility: 'ie8'}))
         .pipe(concat('shire.min.css'))
         .pipe(gulp.dest('./dist/css'));
 });
