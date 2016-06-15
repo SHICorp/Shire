@@ -5,6 +5,7 @@ var concat = require('gulp-concat');
 var cleanCss = require('gulp-clean-css');
 var less = require('gulp-less');
 var rename = require('gulp-rename');
+var webserver = require('gulp-webserver');
 
 gulp.task('compileLess', function() {
     return gulp.src('./src/less/**/*.less')
@@ -40,6 +41,16 @@ gulp.task('clean', function () {
     del.sync(['./dist/**/*', './dist/*'], { force: true });
 });
 
-gulp.task('build', ['clean', 'minifyJavaScript', 'minifyCss', 'copyFonts']);
 
+gulp.task('webserver', ['build'], function () {
+    gulp.src('.')
+        .pipe(webserver({
+            livereload: true,
+            directoryListing: true,
+            open: 'http://localhost:8000/docs/index.html',
+            fallback: 'index.html'
+        }));
+});
+
+gulp.task('build', ['clean', 'minifyJavaScript', 'minifyCss', 'copyFonts']);    
 gulp.task('default', ['build']);
