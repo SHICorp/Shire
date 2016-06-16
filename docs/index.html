@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Start Screen Design</title>
-        <link type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
         <link type="text/css" rel="stylesheet" href="/bower_components/Ionicons/css/ionicons.css" />
         <link type="text/css" rel="stylesheet" href="/dist/css/shire.min.css" />
         <link type="text/css" rel="stylesheet" href="css/docs.css" />
@@ -11,14 +11,14 @@
     <body>
         <nav>
             <div class="profile">
-                <div class="profile-toolbar">
+                <div class="image-toolbar">
                     <button class="btn btn-flat"><span class="ion-android-menu"></span></button>
                 </div>
-                <button class="btn btn-float"><span class="ion-compose"></span>Change</button>
+                <button class="btn btn-float"><span class="ion-compose"></span><span>Change</span></button>
                 <img src="img/avatar.png" width="250" />
             </div>
             <div class="scroll-wrapper">
-                <ul class="nav-items scroll-content">
+                <ul class="scroll-content">
                     <li>
                         <a href="#home">
                             <div class="ion-android-home nav-icon"></div>
@@ -159,9 +159,9 @@
         <main>
             <header>
                 <div class="appbar">
-                    <div class="ion-with-text float-r ion-android-happy send-feedback" title="Send Feedback">Send Feedback</div>
-                    <div class="ion-android-menu float-l show-nav"></div>
-                    <div class="ion-android-search float-l"></div>
+                    <button class="btn float-r" title="Send Feedback"><span class="ion-android-happy"></span><span>Send Feedback</span></button>
+                    <button class="btn float-l toggle-nav"><span class="ion-android-menu"></span></button>
+                    <button class="btn float-l"><span class="ion-android-search"></span></button>
                     <div class="appbar-text">
                         <input type="text" value="Search..." />
                     </div>
@@ -186,7 +186,7 @@
                         <div class="col-sm-12">
                             <a name="home"></a>                            
                             <div class="page-content">
-                                <section class="social-feed">
+                                <section class="iframe-content">
                                     <div class="card">									
                                         <div class="card-header">
                                             <div class="card-title">
@@ -3597,18 +3597,12 @@
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget ipsum luctus neque tempor facilisis ut at nunc. Vestibulum id tempus mauris.</p>
                                         <p>Fusce facilisis suscipit felis, vel egestas enim ornare non. Phasellus vitae sem eu neque posuere tincidunt. Nunc elementum lectus dolor, sit amet tempus lectus facilisis id.</p>
                                         <ul class="icon-ul">
-                                            <li class="ion-android-home"></li>
-                                            <li>Suspendisse placerat dui a porta commodo. Integer vulputate scelerisque urna, non volutpat nunc lacinia in.</li>
-                                            <li class="ion-android-cloud"></li>
-                                            <li>Pellentesque id sodales turpis. Morbi pretium nisi mauris, sed egestas sapien volutpat in.</li>
-                                            <li class="ion-android-document"></li>
-                                            <li>Quisque vulputate pellentesque ipsum sed pharetra. Donec est nibh, maximus ac metus vel, commodo vestibulum est.</li>
-                                            <li class="ion-android-person"></li>
-                                            <li>Mauris euismod dui a turpis congue ullamcorper.</li>
-                                            <li class="ion-android-options"></li>
-                                            <li>Morbi aliquam hendrerit feugiat. Donec in congue nibh, a dapibus sapien.</li>
-                                            <li class="ion-android-list"></li>
-                                            <li>Etiam vitae placerat ligula. Aliquam scelerisque diam dolor, ac rhoncus arcu vulputate in. Integer non ornare lectus.</li>
+                                            <li><span class="ion-android-home"></span>Suspendisse placerat dui a porta commodo. Integer vulputate scelerisque urna, non volutpat nunc lacinia in.</li>
+                                            <li><span class="ion-android-cloud"></span>Pellentesque id sodales turpis. Morbi pretium nisi mauris, sed egestas sapien volutpat in.</li>
+                                            <li><span class="ion-android-document"></span>Quisque vulputate pellentesque ipsum sed pharetra. Donec est nibh, maximus ac metus vel, commodo vestibulum est.</li>
+                                            <li><span class="ion-android-person"></span>Mauris euismod dui a turpis congue ullamcorper.</li>
+                                            <li><span class="ion-android-options"></span>Morbi aliquam hendrerit feugiat. Donec in congue nibh, a dapibus sapien.</li>
+                                            <li><span class="ion-android-list"></span>Etiam vitae placerat ligula. Aliquam scelerisque diam dolor, ac rhoncus arcu vulputate in. Integer non ornare lectus.</li>
                                         </ul>
                                     </div>
                                     <div class="dialog-actions">
@@ -3644,13 +3638,13 @@
                                     </div>
                                     <div class="dialog-toolbar">
                                         <button class="btn">
-                                            <div class="ion-android-person ion-with-text">View Profile</div>
+                                            <span class="ion-android-person"></span>View Profile
                                         </button>
                                         <button class="btn">
-                                            <div class="ion-social-skype ion-with-text">Call on Skype</div>
+                                            <span class="ion-social-skype"></span>Call on Skype
                                         </button>
                                         <button class="btn">
-                                            <div class="ion-android-mail ion-with-text">Send Email</div>
+                                            <span class="ion-android-mail"></span>Send Email
                                         </button>
                                     </div>
                                     <div class="dialog-content">

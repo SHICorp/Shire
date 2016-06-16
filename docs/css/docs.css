@@ -21,3 +21,9 @@
 .person {
     background-image: url('../img/person.png');
 }
+content .page-content {
+    overflow: hidden;
+}
+.home {
+    overflow: hidden;
+}
