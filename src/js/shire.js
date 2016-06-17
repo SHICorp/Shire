@@ -28,6 +28,14 @@ $(function () {
             $icon.removeClass('ion-android-checkbox');
             $icon.addClass('ion-android-checkbox-outline-blank');
         }
+        else if ($icon.hasClass('ion-android-arrow-dropdown')) {
+            $icon.removeClass('ion-android-arrow-dropdown');
+            $icon.addClass('ion-android-arrow-dropup');         
+        }
+        else if ($icon.hasClass('ion-android-arrow-dropup')) {
+            $icon.removeClass('ion-android-arrow-dropup');
+            $icon.addClass('ion-android-arrow-dropdown');
+        }                
         $icon.toggleClass('ion-active');
     });                
 
@@ -42,13 +50,15 @@ $(function () {
             $this.parent().addClass('tall');
     });
 
-    $('nav ul > li > a').click(function (e) {
+    $('nav ul > li > a').click(function () {
         $this = $(this);
         $parent = $this.parent();
-        if ($parent.hasClass('open'))
-            $parent.removeClass('open');
-        else
-            $parent.addClass('open');
+        if ($parent.find('ul.sub-menu').length) {
+            if ($parent.hasClass('open'))
+                $parent.removeClass('open');
+            else
+                $parent.addClass('open');
+        }
     });
 
     $('.sidebar-header').click(function () {

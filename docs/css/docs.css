@@ -17,6 +17,7 @@
 .component > .menu {
     display: inline-block;
     position: initial;
+    opacity: 1;
 }
 .person {
     background-image: url('../img/person.png');
