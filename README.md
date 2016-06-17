@@ -16,5 +16,4 @@ dist
 ## Running documentation locally
 1. Install all dependencies with `npm install`.
 1. Install all bower dependencies with `bower install`.
-1. Run node `node app.js` which will start the express server.
-1. Browse to http://localhost:3000/docs
+1. Run the gulp task `gulp webserver` which will build, start the web server and launch your browser.
