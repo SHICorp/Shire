@@ -1,4 +1,3 @@
-/* GLOBAL */
 @font-face {
     font-family:SPO365Icons;
     src:url(../fonts/Office365Icons.eot);
@@ -7,8 +6,56 @@
         url(../fonts/Office365Icons.ttf) format("truetype"),
         url(../fonts/Office365Icons.svg#web) format("svg");
     font-style:normal;
-    font-weight:400
+    font-weight:400;
 }
+
+@primary: #4791d2;
+@primaryText: #fff;
+@primaryHover: #3473a8;
+@primaryHoverText: #d2e1e9;
+@secondary: #262d40;
+@secondaryText: #ebecf0;
+@secondaryHover: #7a7d8e;
+@text: #262d40;
+@inputText: #c5c5c7;
+@inputTextFocus: #84828d;
+@background: #f7f7f7;
+@favorite: #ffb900;
+@border: #e9e9e9;
+@strongBorder: #dfdfdf;
+
+/* Functions */
+.text-normal() {
+    font-family:  "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: @text;    
+    font-weight: 400;
+}
+.text-strong() {
+    font-family:  "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: @text;    
+    font-weight: 500;    
+}
+.SPIcons() {
+    font-family: SPO365Icons;
+    font-size: 18px;
+    color: @text;
+    font-weight: 400;
+}
+.clearfix() {
+    zoom:1;
+    &:before, &:after{ content:""; display:table; }
+    &:after{ clear: both; }
+}
+.no-wrap() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* GLOBAL */
 * {
     box-sizing: border-box;
 }
@@ -16,29 +63,25 @@ html {
     height: 100%;
 }
 body {
-    background: #f7f7f7;
-    font-family:  "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    color: #262d40;
+    .text-normal();
+
+    background: @background;
     height: 100%;
     overflow: hidden;
 }
 *[class*="ion-"] {
     padding: 5px 6px;
     text-align: center;
-}
-*[class*="ion-"]:before {
-    font-size: 18px;
-}
-*[class*="ion-"].ion-with-text {
-    line-height: 25px;
-}
-*[class*="ion-"].ion-with-text:before {
-    margin-right: 8px;
-    font-size: 18px !important;
+
+    &:before {
+        font-size: 18px;        
+    }
 }
 *.ion-active[class*="ion"]:before {
-	color: #ffb900 !important;
+	color: @primary !important;
+}
+.ion-android-star.ion-active:before {
+    color: @favorite !important;
 }
 .float-l {
     float: left;
@@ -47,7 +90,8 @@ body {
     float: right;
 }
 a, a:focus, a:hover, a:active,
-button, button:focus, button:hover, button:active {
+button, button:focus, button:hover, button:active,
+.btn:active, .btn:focus {
     outline: 0 !important;
     border: none;
 }
@@ -57,6 +101,26 @@ button, button:focus, button:hover, button:active {
 .large {
     font-size: 115%;
 }
+.square {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+}
+.square > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.nomargin {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Content */
 main {
     height: 100%;
     position: relative;
@@ -64,12 +128,19 @@ main {
 }
 content {
     padding: 30px 15px 20px 15px;
-    top: 42px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     position: absolute;
     overflow-y: auto;
+
+    @media (min-width: 992px) {
+        right: 0;     
+    }
+}
+header.header + content {
+    top: 42px;
 }
 content p {
     line-height: 1.5em;
@@ -77,46 +148,45 @@ content p {
 content ul > li {
     padding: 4px 0;
 }
-content .page-content {
-    overflow: hidden;
-}
-.social-feed {
+.iframe-content {
     width: 250px;
     margin-left: 30px;
     float: right;
     display: none;
 }
-.home {
-    overflow: hidden;
-}
-
-/* CONTENT */
 .icon-ul {
+    .clearfix();
+
     margin: 0;
+    padding: 0;
     padding-left: 10px;
     list-style-type: none;
-    overflow: hidden;
 }
-.icon-ul li {
+.icon-ul > li {
     min-height: 25px;
     line-height: 1.5em;
     padding: 4px 0;
     overflow: hidden;
 }
-.icon-ul li[class*="ion-"] {
-    float: left;
-    clear: left;
-    margin-right: 10px;
-    padding: 4px 0;
-    width: 20px;
-    overflow: initial;
+.icon-ul > li > * {
+    overflow: hidden;
+    display: block;
 }
-.icon-ul li[class*="ion-"]:before {
-    font-size: 18px;
-    color: #4791d2;
+.icon-ul > li > *[class*="ion-"] {
+    display: block;
+    overflow: visible;
+    float: left;
+    margin-right: 10px;
+    width: 20px;
+    padding: 0;
+
+    &:before {
+        color: @primary;
+    }
 }
 .ion-sharepoint:before { 
-    font-family: SPO365Icons; 
+    .SPIcons();
+
     content: "\e072"; 
 }
 
@@ -125,98 +195,130 @@ nav {
     height: 100%;
     width: 250px;
     float: left;
-    background: #4791d2;
+    background: @primary;
     display: none;
+
+    @media (min-width: 992px) {
+        display: block;      
+    }
 }
 nav ul {
     margin: 0;
     padding: 10px 0 !important;
     list-style-type: none;
 }
-nav ul > li > a, nav ul > li > a:active, nav ul > li > a:focus, nav ul > li > a:visited {
+nav ul > li > a {
     display: block;
     padding: 10px 30px;
-    color: #fff;
+    color: @primaryHoverText;
     overflow: hidden;
     text-decoration: none;
+
+    &:active, &:focus {
+        color: @primaryText;
+        text-decoration: none;
+    }
+    &:visited {
+        color: @primaryHoverText;
+        text-decoration: none;
+    }
 }
-nav ul > li > a:hover {
-    color: #b8cedb;
+nav ul > li > a:hover,
+nav ul > li.open > a {
+    color: @primaryText !important;
     text-decoration: none;
-    background: #3473a8;
+    background: @primaryHover !important;
 }
 nav .nav-icon {
     float: right;
 }
 nav .nav-title {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    .no-wrap();
+
     line-height: 1.3em;
     font-size: 14px;
 }
 nav ul > li > a > *[class*="ion-"] {
     padding: 0;
-}
-nav ul > li > a > *[class*="ion-"]:before {
-    margin-left: 12px;
-    text-align: center;
-    font-size: 18px;
+
+    &:before {
+        margin-left: 12px;
+        text-align: center;
+        font-size: 18px;
+    }
 }
 nav ul.sub-menu {
-    background-color: #262d40;
-    color: #ebecf0;
-    display: none;
-    padding: 2px 0 10px 0;
+    background-color: @secondary;
+    color: @secondaryText;
+    height:0;
+    padding: 0 !important;
+    visibility:hidden;
+    opacity:0;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease; 
 }
-nav ul.sub-menu > li > a:hover {
-    background: #7a7d8e;
-    color: #ebecf0;
+nav ul > li.open ul.sub-menu {
+    height:100%;
+    visibility:visible;
+    opacity:1;
+    padding: 10px 0 !important;
 }
-nav .open ul.sub-menu {
-    display: block;
+nav ul ul.sub-menu > li > a {
+    color: @secondaryText !important;
+
+    &:hover {
+        background: @secondaryHover !important;
+        color: @secondaryText !important;
+    }
 }
-nav .profile {
+.profile {
     position: relative;
 }
-nav .profile-toolbar {
+.image-toolbar {
     position: absolute;
     width: 100%;
     background: -moz-linear-gradient(top, rgba(2,0,0,0.3333) 0%, rgba(0,0,0,0) 100%);
     background: -webkit-linear-gradient(top, rgba(2,0,0,0.3333) 0%,rgba(0,0,0,0) 100%);
     background: linear-gradient(to bottom, rgba(2,0,0,0.3333) 0%,rgba(0,0,0,0) 100%);    
 }
-nav .profile-toolbar .btn *[class*="ion-"]:before {
+.image-toolbar .btn *[class*="ion-"]:before {
     color: #fff;
 }
-nav .profile-toolbar .btn:active, nav .profile-toolbar .btn:focus {
+.image-toolbar .btn:active,
+.image-toolbar .btn:focus {
     background: transparent;
 }
-nav .profile .btn-float {
+.profile .btn-float {
     position: absolute;
     top: 10px;
     right: 10px;
     visibility:hidden;
 }
-nav .profile .btn-float span {
-    margin-right: 5px;
-}
-nav .profile:hover .btn-float {
+.profile:hover .btn-float {
     visibility: visible;
 }
 
 /* HEADER */
-header {
+header.header {
     position: fixed;
     right: 0;
     top: 0;
     left: 0;
     z-index: 99999;
+
+    @media (min-width: 992px) {
+        position: fixed;
+        left: 250px;
+    }
 }
 .appbar {
-    background: #4791d2;
-    color: #fdfcff;
-    overflow: hidden;
+    .clearfix(); 
+
+    background: @primary;
+    color: @primaryText;
     box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2);
 }
 .appbar > div {
@@ -224,69 +326,84 @@ header {
     font-size: 14px;
     cursor: pointer;
     border-right: solid 1px #5d9bd6;
-}
-.appbar > div:hover {
-    background: #3473a8;
-    color: #b8cedb;
-}
-.appbar > div:last-child {
-    border-right: none;
+    
+    &:hover {
+        background: @primaryHover;
+        color: @primaryHoverText;
+    }
+    &:last-child {
+        border-right: none;
+    }
 }
 .appbar *[class*="ion-"] {
     padding: 8px 15px;
     text-align: center;
-}
-.appbar *[class*="ion-"]:before {
-    font-size: 24px;
+
+    &:before {
+        font-size: 24px;
+    }
 }
 .appbar-text {
     overflow: hidden;
-    color: #c5c5c7;
 }
 .appbar-text input[type="text"] {
     border: none;
     padding: 11px 15px;
     font-size: 14px;
     background: #fff;
+    color: @inputText;
     width: 100%;
-}
-.appbar-text input[type="text"]:focus {
-    outline: 0;
-    color: #84828d;
+
+    &:focus {
+        outline: 0;
+        color: @inputTextFocus;
+    }
 }
 .appbar-text:hover input[type="text"] {
-    color: #84828d;
+    color: @inputTextFocus;
 }
 .send-feedback {
     display: none;
+
+    @media (min-width: 992px) {
+        display: block;
+    }
+}
+.toggle-nav {
+    @media (min-width: 992px) {
+        display: none;
+    }
 }
 
-/* Social Bar */
+/* Sidebar */
 .sidebar {
     position: absolute;
     right: 0;
     top: 42px;
     bottom: 0;
     width: 42px;
-    background: #262d40;
-    color: #fdfcff;
+    background: @secondary;
+    color: @secondaryText;
     overflow: hidden;
     z-index: 99999;
     display: none;
+
+    @media (min-width: 992px) {
+        display: block;
+    }
 }
 .sidebar-icon[class*="ion-"] {
     padding: 8px 12px;
     border-bottom: solid 1px #454a59;
     cursor: pointer;
+
+    &:before {
+        font-size: 24px;
+    }
 }
-.sidebar-header:hover .sidebar-icon[class*="ion-"] {
-    background: #7a7d8e;
-}
+.sidebar-header:hover .sidebar-icon[class*="ion-"],
 .sidebar-header:hover *[class*="ion-"]:hover {
     background: #7a7d8e;
-}
-.sidebar-icon[class*="ion-"]:before {
-    font-size: 24px;
 }
 .sidebar-title {
     transform: rotate(90deg);
@@ -305,7 +422,7 @@ header {
     position: absolute;
 }
 .sidebar.open {
-    width: 450px;
+    width: 400px;
     box-shadow: -2px 0px 2px -1px rgba(0,0,0,0.2);
 }
 .sidebar.open .sidebar-content {
@@ -325,64 +442,82 @@ header {
 }
 
 /* BUTTON */
-button:active, .btn:active {
-    outline: none;
-    border: none;
-}
-button:focus, .btn:focus {
-    outline: 0;
-}
 .btn {
-    background: #4791d2;
+    background: @primary;
     border-radius: 0;
     box-shadow: 0 2px 1px 0px rgba(0,0,0,0.2);
-    color: #fff;
+    color: @primaryText;
     padding: 7px 15px;
     border: none;
     font-size: 14px;
+
+    &:active,
+    &:focus {
+        background: @primaryHover;
+        color: @primaryHoverText;
+    }
+    &:hover {
+        background: @primaryHover;
+        color: @primaryHoverText;        
+
+        *[class*="ion-"] {
+            &:before {
+                color: @primaryHoverText;
+            }
+        }
+    }
 }
-.btn-float *[class*="ion-"] {
-    display: inline;
+.btn > *[class*="ion-"] {
+    line-height: 25px;
+    display: inline-block;
     padding: 0;
+
+    &:before {
+        color: @primaryText;
+    }
 }
-.btn-flat *[class*="ion-"] {
-    padding: 0;
-    line-height: 18px;
-}
-.btn-flat *[class*="ion-"]:before {
-    font-size: 24px !important;
-    color: #4791d2;
-}
-.btn:hover {
-    color: #b8cedb;
-}
-.btn:active, .btn:focus {
-    background: #3473a8;
-    color: #b8cedb;
+.btn > *[class*="ion-"] + * {
+    margin-left: 5px;
 }
 .btn-flat {
     background: transparent;
-    color: #4791d2;
+    color: @primary;
     text-transform: uppercase;
     font-size: 13px;
     box-shadow: none;
     line-height: 24px;
-}
-.btn-flat:hover {
-    color: #4791d2;
+
+    &:focus {
+        background: #e5e5e5;
+        color: @primary;
+        box-shadow: none;
+    }
+    &:hover {
+        background: transparent;
+        color: @primary;
+        
+        *[class*="ion-"] {
+            &:before {
+                color: @primary;
+            }
+        }        
+    }
 }
 .btn-flat:active, .btn-flat.btn-active {
     background: #eaeaea;
-    color: #4791d2;
-    box-shadow: none;
-}
-.btn-flat:focus {
-    background: #e5e5e5;
-    color: #4791d2;
-    box-shadow: none;
+    color: @primary;
+    box-shadow: none;  
 }
 .btn-flat.disabled, .btn-flat.disabled:hover, .btn-flat.disabled:active, .btn-flat.disabled:focus {
     color: rgba(0,0,0,0.26);
+}
+.btn-flat > *[class*="ion-"] {
+    line-height: 18px;
+
+    &:before {
+        font-size: 24px !important;
+        color: @primary;
+    }
 }
 .btn-float {
     border-radius: 20px;
@@ -393,19 +528,20 @@ button:focus, .btn:focus {
 .table { 
     border-spacing: 5px;
     width: 100%;
-    border-top: solid 1px #e9e9e9;
-    border-left: solid 1px #dfdfdf;
-    border-right: solid 1px #dfdfdf;
+    border-top: solid 1px @border;
+    border-left: solid 1px @strongBorder;
+    border-right: solid 1px @strongBorder;
     box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2);
     text-align: left;
 }
 .table > tbody > tr {
     vertical-align: middle;
 }
-.table > tbody > tr > th, .table > tbody > tr > td {
+.table > tbody > tr > th,
+.table > tbody > tr > td {
     padding: 12px 15px;
     background: #fff;
-    border-bottom: solid 1px #e9e9e9;
+    border-bottom: solid 1px @border;
 }
 .table > tbody > tr > th {
     color: #505358;
@@ -415,7 +551,7 @@ button:focus, .btn:focus {
 }
 .table > tbody > tr > td {
     font-weight: normal;
-    color: #262d40;
+    color: @text;
     vertical-align: middle;
 }
 .table > tbody > tr:hover > td {
@@ -426,9 +562,10 @@ button:focus, .btn:focus {
 }
 .table > tbody > tr > th.sort *[class*="ion-"] {
     padding: 0;
-}
-.table > tbody > tr > th.sort *[class*="ion-"]:before {
-    margin-right: 5px;
+    
+    &:before {
+        margin-right: 5px;
+    }
 }
 .table > tfoot > tr > td {
     text-align: center;
@@ -438,12 +575,13 @@ button:focus, .btn:focus {
 .table *[class*="ion-"] {
     text-align: center;
     float: left;
-    color: #262d40;
+    color: @text;
     padding: 0;
     line-height: 0;
-}
-.table *[class*="ion-"]:before {
-    font-size: 18px;
+
+    &:before {
+        font-size: 18px;
+    }
 }
 .table > tbody > tr.selected .ion-android-checkbox-outline-blank:before {
     content: "\f374";
@@ -467,7 +605,7 @@ button:focus, .btn:focus {
 .card .table {
     box-shadow: none;
     border: none;
-    border-top: solid 1px #e9e9e9;
+    border-top: solid 1px @border;
     margin-bottom: 0;
 }
 .card .table > tr:last-child > td {
@@ -478,20 +616,21 @@ button:focus, .btn:focus {
 .toolbar {
     font-size: 13px;
     background: #e9e9e9;
-    border-top: solid 1px #dfdfdf;
-    border-left: solid 1px #dfdfdf;
-    border-right: solid 1px #dfdfdf;
-}
-.toolbar:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
+    border-top: solid 1px @strongBorder;
+    border-left: solid 1px @strongBorder;
+    border-right: solid 1px @strongBorder;
+
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
 }
 .list .toolbar {
-    border-bottom: solid 1px #dfdfdf;
+    border-bottom: solid 1px @strongBorder;
     margin-bottom: 20px;
     text-align: left;
 }
@@ -507,24 +646,48 @@ button:focus, .btn:focus {
     font-size: 13px;
     padding: 11px 10px;
     line-height: 22px;
-    border-right: solid 1px #dfdfdf;
+    border-right: solid 1px @strongBorder;
     display: none;
     cursor: pointer;
     position: relative;
-}
-.toolbar-filters > ul > li:hover {
-    background: #f2f2f2;
-}
-.toolbar-filters > ul > li:first-child {
-    padding: 11px 15px;
-    display: block;
-    cursor: default;
-}
-.toolbar-filters > ul > li:first-child:hover {
-    background: transparent;
-}
-.toolbar-filters > ul > li:last-child {
-    margin-right: 0;
+
+    &:hover {
+        background: #f2f2f2;
+
+        @media (min-width: 992px) {
+            cursor: pointer;            
+        }
+    }
+    &:first-child {
+        padding: 11px 15px;
+        display: block;
+        cursor: default;
+        float: none;
+        border-right: none;
+
+        &:hover {
+            background: transparent;
+        }       
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    [class*="ion-"] {
+        &:first-child {
+            &:before {
+                font-size: 18px;
+                color: @text;
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        display: block;
+
+        &:first-child {
+            float: left; 
+            border-right: solid 1px @strongBorder;           
+        }
+    }    
 }
 .toolbar-filters > ul > li.toolbar-search {
     display: block;
@@ -533,9 +696,10 @@ button:focus, .btn:focus {
     margin-right: 0;
     overflow: hidden;
     float: none;
-}
-.toolbar-filters > ul > li.toolbar-search:hover {
-    background: transparent;
+    
+    &:hover {
+        background: transparent;
+    }
 }
 .card .toolbar {
 	border-left: none;
@@ -546,11 +710,7 @@ button:focus, .btn:focus {
 }
 .toolbar-filters *[class*="ion-"]:before {
     font-size: 14px;
-    color: #262d40;
-}
-.toolbar-filters > ul > li[class*="ion-"]:first-child:before {
-    font-size: 18px;
-    color: #262d40;
+    color: @text;
 }
 .toolbar-input {
     overflow: hidden;
@@ -564,10 +724,10 @@ button:focus, .btn:focus {
 }
 .toolbar-search input[type="text"]:focus {
     outline: 0;
-    color: #84828d;
+    color: @inputTextFocus;
 }
 .toolbar-search:hover input[type="text"] {
-    color: #84828d;
+    color: @inputTextFocus;
 }
 .toolbar-search *[class*="ion-"] {
     float: left;
@@ -575,21 +735,21 @@ button:focus, .btn:focus {
 }
 .toolbar-search *[class*="ion-"]:before {
     font-size: 18px;
-    color: #262d40;
+    color: @text;
 }
 
 /* CARDS */
 .card {
-    border-top: solid 1px #e9e9e9;
-    border-left: solid 1px #dfdfdf;
-    border-right: solid 1px #dfdfdf;
-    border-bottom: solid 1px #e9e9e9;
+    border-top: solid 1px @border;
+    border-left: solid 1px @strongBorder;
+    border-right: solid 1px @strongBorder;
+    border-bottom: solid 1px @border;
     box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2);
     border-radius: 4px;
     margin-bottom: 30px;
 }
 .card > a, .card > a:active, .card > a:link, .card > a:hover, .card > a:visited {
-    color: #262d40;
+    color: @text;
     text-decoration: none;
 }
 .card-header {
@@ -644,24 +804,6 @@ button:focus, .btn:focus {
 .card-image > img {
     width: 100%;
 }
-.square {
-    overflow: hidden;
-    display: block;
-    width: 100%;
-    padding-top: 100%;
-    position: relative;
-}
-.square > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-.nomargin {
-    padding: 0 !important;
-    margin: 0 !important;
-}
 
 /* LIST */
 .list {
@@ -676,7 +818,7 @@ button:focus, .btn:focus {
 .list-item > *[class*="ion-"]:before {
     font-size: 18px;
     color: #4791d2;
-    line-height: 24px;
+    line-height: 18px;
 }
 .list-item > .list-icon {
     float: left;
@@ -728,7 +870,7 @@ button:focus, .btn:focus {
     font-size: 14px;
 }
 .list-title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
 }
 .list-line {
@@ -811,6 +953,7 @@ button:focus, .btn:focus {
     width: 100%;
     height: 100%;
     text-align: center;
+    background-repeat: no-repeat;
 }
 .thumbnail-wrapper > img {
     height: 100%;
@@ -829,11 +972,11 @@ button:focus, .btn:focus {
     background-position: 50% 50%;
 }
 .card .list {
-    border-top: solid 1px #e9e9e9;
+    border-top: solid 1px @border;
 }
 .card .list-item {
     background: #fff;
-    border-bottom: solid 1px #e9e9e9;
+    border-bottom: solid 1px @border;
     padding: 12px;
     margin-bottom: 0;
 }
@@ -842,7 +985,7 @@ button:focus, .btn:focus {
 }
 @media (max-width: 767px) {
     .card div.col-xs-6.list-item {
-        border-right: solid 1px #e9e9e9;
+        border-right: solid 1px @border;
     }   
     .card div.col-xs-6.list-item:nth-of-type(2n) {
         border-right: none;
@@ -850,7 +993,7 @@ button:focus, .btn:focus {
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .card div.col-sm-6.list-item {
-        border-right: solid 1px #e9e9e9;
+        border-right: solid 1px @border;
     }
     .card div.col-sm-6.list-item:nth-of-type(2n) {
         border-right: none;
@@ -858,19 +1001,19 @@ button:focus, .btn:focus {
 }
 @media (min-width: 992px) and (max-width: 1199px) {
     .card div.col-md-6.list-item {
-        border-right: solid 1px #e9e9e9;
+        border-right: solid 1px @border;
     }
     .card div.col-md-6.list-item:nth-of-type(2n) {
         border-right: none;
     }  
     .card div.col-md-4.list-item {
-        border-right: solid 1px #e9e9e9;
+        border-right: solid 1px @border;
     }
     .card div.col-md-4.list-item:nth-of-type(3n) {
         border-right: none;
     }     
     .card div.col-md-3.list-item {
-        border-right: solid 1px #e9e9e9;
+        border-right: solid 1px @border;
     }
     .card div.col-md-3.list-item:nth-of-type(4n) {
         border-right: none;
@@ -878,31 +1021,31 @@ button:focus, .btn:focus {
 }
 @media (min-width: 1200px) {
     .card div.col-lg-6.list-item {
-        border-right: solid 1px #e9e9e9;
+        border-right: solid 1px @border;
     }
     .card div.col-lg-6.list-item:nth-of-type(2n) {
         border-right: none;
     }  
     .card div.col-lg-4.list-item {
-        border-right: solid 1px #e9e9e9;
+        border-right: solid 1px @border;
     }
     .card div.col-lg-4.list-item:nth-of-type(3n) {
         border-right: none;
     }  
     .card div.col-lg-3.list-item {
-        border-right: solid 1px #e9e9e9;
+        border-right: solid 1px @border;
     }
     .card div.col-lg-3.list-item:nth-of-type(4n) {
         border-right: none;
     }  
     .card div.col-lg-2.list-item {
-        border-right: solid 1px #e9e9e9;
+        border-right: solid 1px @border;
     }
     .card div.col-lg-2.list-item:nth-of-type(6n) {
         border-right: none;
     }  
     .card div.col-lg-1.list-item {
-        border-right: solid 1px #e9e9e9;
+        border-right: solid 1px @border;
     }
     .card div.col-lg-1.list-item:nth-of-type(12n) {
         border-right: none;
@@ -910,7 +1053,7 @@ button:focus, .btn:focus {
 }
 .card .list .subheader {
     background: #f2f2f2;
-    border-bottom: solid 1px #e9e9e9;
+    border-bottom: solid 1px @border;
     clear: left;
 }
 .card .card-header .avatar .thumbnail-wrapper {
@@ -936,8 +1079,8 @@ button:focus, .btn:focus {
     min-width: 150px;
     line-height: 18px;
     cursor: pointer;
-    color: #262d40;
-    border: solid 1px #e9e9e9;
+    color: @text;
+    border: solid 1px @border;
 }
 .card-views > ul > li:active {
     background: #f2f2f2;
@@ -949,7 +1092,7 @@ button:focus, .btn:focus {
     border: none;
 }
 .card-views > ul > *[class*="ion-"]:first-child:before {
-    color: #262d40;
+    color: @text;
     font-size: 24px;
 }
 .card-views > ul > li:hover:first-child {
@@ -976,7 +1119,7 @@ button:focus, .btn:focus {
     float: right;
 }
 .paging .paging-info {
-	color: #262d40;
+	color: @text;
 }
 
 /* CHIPS */
@@ -994,11 +1137,12 @@ button:focus, .btn:focus {
     display: inline-block;
     position: relative;
     margin-bottom: 1px;
-}
-.chip:hover {
-    background: #262d40;
-    color: #fff !important;
-    cursor: pointer;
+    cursor: pointer;       
+
+    &:hover {
+        background: #262d40;
+        color: #fff !important;    
+    }
 }
 .chip-with-icon {
     padding-left: 29px;
@@ -1027,23 +1171,24 @@ button:focus, .btn:focus {
 .chip *[class*='ion-'] {
     padding: 0;
     margin-left: 7px;
+
+    &:before {
+        color: #b7b7b7 !important;
+        font-size: 18px;
+        display: block;
+    }
 }
 .chip .chip-icon *[class*='ion-'] {
     margin-left: 0;
 }
-.chip *[class*='ion-']:before {
-    color: #b7b7b7;
-    font-size: 18px;
-    display: block;
-}
 .chip > *[class*='ion-']:before {
-    color: #f2f2f2;
+    color: #f2f2f2 !important;
 }
 .chip:hover > *[class*='ion-']:before {
-    color: #b7b7b7;
+    color: #b7b7b7 !important;
 }
 .chip .chip-icon *[class*='ion-']:before {
-    color: #fff;
+    color: #fff !important;
 }
 .chip .thumbnail-wrapper > img {
     width: 100%;
@@ -1076,6 +1221,8 @@ button:focus, .btn:focus {
     left: 6px;
 }
 .dialog {
+    .text-normal(); 
+
     -webkit-box-shadow: 0 0 6px rgba(0,0,0,.16);
     box-shadow: 0 0 6px rgba(0,0,0,.16);
     background: #f7f7f7;
@@ -1087,13 +1234,6 @@ button:focus, .btn:focus {
     min-width: 208px;
     max-width: 550px;
     height: auto;
-    /*
-    max-height: -webkit-calc(100vh - 80px)!important;
-    max-height: -moz-calc(100vh - 80px)!important;
-    max-height: calc(100vh - 80px)!important;
-    */
-    font-family: "Segoe UI", Arial, sans-serif;
-    color: #262d40;
     font-size: 14px;
     line-height: 1.5em;
     text-align: left;
@@ -1254,14 +1394,13 @@ button:focus, .btn:focus {
 .grid-item > .thumbnail-wrapper .grid-action:hover *[class*="ion-"]:before {
     color: rgba(255,255,255,1);
 }
-.grid-item.smaller > .thumbnail-wrapper > *[class*="ion-"] {
-    padding-top: 45%;
-}
 .grid-item.smaller .grid-action *[class*="ion-"] {
     padding: 0;
 }
 .grid-item.smaller > .thumbnail-wrapper > *[class*="ion-"]:before {
     font-size: 32px;
+    line-height: 32px;
+    top: -18px;
 }
 .grid-item.smaller .grid-title {
     font-size: 13px;
@@ -1286,7 +1425,9 @@ button:focus, .btn:focus {
 .grid-item .thumbnail-wrapper > *[class*="ion-"]:before {
     font-size: 48px;
     color: #fff;
-    margin-top: -24px;
+    line-height: 48px;
+    position: relative;
+    top: -24px;
 }
 .grid-list .grid-item .bordered {
     border-width: 2px;
@@ -1583,36 +1724,42 @@ button:focus, .btn:focus {
 .tooltip.right > .tooltip-inner,
 .tooltip.top > .tooltip-inner,
 .tooltip.bottom > .tooltip-inner {
-    background-color: #262d40;
+    background-color: @secondary;
 }
 .tooltip.left > .tooltip-arrow {
-    border-left-color: #262d40;
+    border-left-color: @secondary;
 }
 .tooltip.right > .tooltip-arrow {
-    border-right-color: #262d40;
+    border-right-color: @secondary;
 }
 .tooltip.top > .tooltip-arrow {
-    border-top-color: #262d40;
+    border-top-color: @secondary;
 }
 .tooltip.bottom > .tooltip-arrow {
-    border-bottom-color: #262d40;
+    border-bottom-color: @secondary;
 }
 
 /* Menus */
 .menu {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 1000;
     -webkit-box-shadow: 0 0 6px -1px rgba(0,0,0,.16);
     box-shadow: 0 0 6px -1px rgba(0,0,0,.16);  
-    border: solid 1px #dfdfdf;
+    border: solid 1px @strongBorder;
     border-top: none;    
     min-width: 100px;
     max-width: 250px;
     width: auto;      
     background: #fff;    
+    display: none;
+    opacity:0;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;     
 }
 .menu-header {
     position: relative;
@@ -1653,6 +1800,7 @@ button:focus, .btn:focus {
 }
 .menu .list > .list-item .list-title {
     font-size: 16px;
+    line-height: 20px;
 }
 .menu .list > .list-item:hover,
 .menu .list > .list-item:focus,
@@ -1668,6 +1816,9 @@ button:focus, .btn:focus {
 }
 .menu .list .ion-active[class*="ion-"]:before {
     color: rgba(38,45,64,1) !important;
+}
+.menu .list .ion-active.ion-android-checkbox:before {
+    color: @primary !important;
 }
 .menu .list > .list-item *[class*="ion-"] {
     padding: 0;
@@ -1701,46 +1852,133 @@ button:focus, .btn:focus {
     border-bottom: none;
 }
 .menu.open {
-    display: inherit;
+    opacity: 1;
+    display: block;
 }
 .menu .menu {
     top: 0;
     left: 100%;
 }
+.menu.mobile .menu {
+    top: 0;
+    left: 0;
+    position: relative;
+    box-shadow: none;
+    border: none;
+}
 
 /* Media Queries */
 @media (min-width: 992px) {
-    .social-feed {
+    .iframe-content {
         display: block;
-    }    
-    .sidebar {
-        display: block;
-    }
-    content {
-        right: 0;
-    }
-    nav {
-        display: block;
-    }
-    .show-nav {
-        display: none;
-    }
-    .send-feedback {
-        display: block;
-    }
-    header {
-        position: fixed;
-        left: 250px;
-    }
-    .toolbar-filters > ul > li {
-        display: block;
-    }
-    .toolbar-filters > ul > li:hover {
-        cursor: pointer;
-    }    
+    }     
 }
 @media (min-width: 1199px) {
-    .social-feed {
-        width: 400px;
+    .iframe-content {
+        width: 450px;
+    }
+}
+
+/* Progress Bar */
+.progress {
+    position: relative;
+    height: 4px;
+    display: block;
+    width: 100%;
+    background-color: #acece6;
+    border-radius: 2px;
+    background-clip: padding-box;
+    margin: 0;
+    overflow: hidden;
+}
+.progress .determinate {
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    bottom: 0;
+    background-color: #26a69a;
+    transition: width .3s linear;
+}
+.progress .indeterminate {
+    background-color: #26a69a;
+}
+.progress .indeterminate:before {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+            animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+.progress .indeterminate:after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+            animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    -webkit-animation-delay: 1.15s;
+            animation-delay: 1.15s;
+}
+@-webkit-keyframes indeterminate {
+    0% {
+        left: -35%;
+        right: 100%;
+    }
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+    100% {
+        left: 100%;
+        right: -90%;
+    }
+}
+@keyframes indeterminate {
+    0% {
+        left: -35%;
+        right: 100%;
+    }
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+    100% {
+        left: 100%;
+        right: -90%;
+    }
+}
+@-webkit-keyframes indeterminate-short {
+    0% {
+        left: -200%;
+        right: 100%;
+    }
+    60% {
+        left: 107%;
+        right: -8%;
+    }
+    100% {
+        left: 107%;
+        right: -8%;
+    }
+}
+@keyframes indeterminate-short {
+    0% {
+        left: -200%;
+        right: 100%;
+    }
+     60% {
+        left: 107%;
+        right: -8%;
+    }
+    100% {
+        left: 107%;
+        right: -8%;
     }
 }

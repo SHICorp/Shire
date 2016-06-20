@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Start Screen Design</title>
-        <link type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
         <link type="text/css" rel="stylesheet" href="/bower_components/Ionicons/css/ionicons.css" />
         <link type="text/css" rel="stylesheet" href="/dist/css/shire.min.css" />
         <link type="text/css" rel="stylesheet" href="css/docs.css" />
@@ -11,14 +11,14 @@
     <body>
         <nav>
             <div class="profile">
-                <div class="profile-toolbar">
+                <div class="image-toolbar">
                     <button class="btn btn-flat"><span class="ion-android-menu"></span></button>
                 </div>
-                <button class="btn btn-float"><span class="ion-compose"></span>Change</button>
+                <button class="btn btn-float"><span class="ion-compose"></span><span>Change</span></button>
                 <img src="img/avatar.png" width="250" />
             </div>
             <div class="scroll-wrapper">
-                <ul class="nav-items scroll-content">
+                <ul class="scroll-content">
                     <li>
                         <a href="#home">
                             <div class="ion-android-home nav-icon"></div>
@@ -157,11 +157,11 @@
             </div>
         </nav>
         <main>
-            <header>
+            <header class="header">
                 <div class="appbar">
-                    <div class="ion-with-text float-r ion-android-happy send-feedback" title="Send Feedback">Send Feedback</div>
-                    <div class="ion-android-menu float-l show-nav"></div>
-                    <div class="ion-android-search float-l"></div>
+                    <button class="btn float-r" title="Send Feedback"><span class="ion-android-happy"></span><span>Send Feedback</span></button>
+                    <button class="btn float-l toggle-nav"><span class="ion-android-menu"></span></button>
+                    <button class="btn float-l"><span class="ion-android-search"></span></button>
                     <div class="appbar-text">
                         <input type="text" value="Search..." />
                     </div>
@@ -186,7 +186,7 @@
                         <div class="col-sm-12">
                             <a name="home"></a>                            
                             <div class="page-content">
-                                <section class="social-feed">
+                                <section class="iframe-content">
                                     <div class="card">									
                                         <div class="card-header">
                                             <div class="card-title">
@@ -218,129 +218,122 @@
                                                         <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                             <div class="list-icon">
                                                                 <div class="thumbnail-wrapper">
-                                                                    <div class="thumbnail-div icon-pdf"></div>
+                                                                    <div class="icon-pdf"></div>
                                                                 </div>
                                                             </div>
                                                             <div class="list-body">
                                                                 <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                                 <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
-                                                                <div class="list-line"><div class="ion-eye"></div>a few seconds ago</div>
                                                             </div>
                                                         </div>
                                                         <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                             <div class="list-icon">
                                                                 <div class="thumbnail-wrapper">
-                                                                    <div class="thumbnail-div icon-docx"></div>
+                                                                    <div class="icon-docx"></div>
                                                                 </div>
                                                             </div>
                                                             <div class="list-body">
                                                                 <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                                 <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
-                                                                <div class="list-line"><div class="ion-compose"></div>several days ago</div>
                                                             </div>
                                                         </div>
                                                         <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                             <div class="list-icon">
                                                                 <div class="thumbnail-wrapper">
-                                                                    <div class="thumbnail-div icon-docx"></div>
+                                                                    <div class="icon-docx"></div>
                                                                 </div>
                                                             </div>
                                                             <div class="list-body">
                                                                 <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                                 <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
-                                                                <div class="list-line"><div class="ion-compose"></div>several days ago</div>
                                                             </div>
                                                         </div>
                                                         <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                             <div class="list-icon">
                                                                 <div class="thumbnail-wrapper">
-                                                                    <div class="thumbnail-div icon-pdf"></div>
+                                                                    <div class="icon-pdf"></div>
                                                                 </div>
                                                             </div>
                                                             <div class="list-body">
                                                                 <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                                 <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
-                                                                <div class="list-line"><div class="ion-eye"></div>several days ago</div>
                                                             </div>
                                                         </div>
                                                         
                                                         <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                             <div class="list-icon">
                                                                 <div class="thumbnail-wrapper">
-                                                                    <div class="thumbnail-div icon-pdf"></div>
+                                                                    <div class="icon-pdf"></div>
                                                                 </div>
                                                             </div>
                                                             <div class="list-body">
                                                                 <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                                 <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
-                                                                <div class="list-line"><div class="ion-eye"></div>several days ago</div>
                                                             </div>
                                                         </div>
                                                         <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                             <div class="list-icon">
                                                                 <div class="thumbnail-wrapper">
-                                                                    <div class="thumbnail-div icon-docx"></div>
+                                                                    <div class="icon-docx"></div>
                                                                 </div>
                                                             </div>
                                                             <div class="list-body">
                                                                 <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                                 <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
-                                                                <div class="list-line"><div class="ion-compose"></div>several days ago</div>
                                                             </div>
                                                         </div>
                                                         <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                             <div class="list-icon">
                                                                 <div class="thumbnail-wrapper">
-                                                                    <div class="thumbnail-div icon-docx"></div>
+                                                                    <div class="icon-docx"></div>
                                                                 </div>
                                                             </div>
                                                             <div class="list-body">
                                                                 <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                                 <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
-                                                                <div class="list-line"><div class="ion-compose"></div>several days ago</div>
                                                             </div>
                                                         </div>
                                                         <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                             <div class="list-icon">
                                                                 <div class="thumbnail-wrapper">
-                                                                    <div class="thumbnail-div icon-pdf"></div>
+                                                                    <div class="icon-pdf"></div>
                                                                 </div>
                                                             </div>
                                                             <div class="list-body">
                                                                 <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                                 <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
-                                                                <div class="list-line"><div class="ion-eye"></div>several days ago</div>
                                                             </div>
                                                         </div>
                                                         <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                             <div class="list-icon">
                                                                 <div class="thumbnail-wrapper">
-                                                                    <div class="thumbnail-div icon-pdf"></div>
+                                                                    <div class="icon-pdf"></div>
                                                                 </div>
                                                             </div>
                                                             <div class="list-body">
                                                                 <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                                 <div class="list-line"><div class="ion-social-dropbox"></div>Dropbox</div>
-                                                                <div class="list-line"><div class="ion-eye"></div>several days ago</div>
                                                             </div>
                                                         </div>
                                                         <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                             <div class="list-icon">
                                                                 <div class="thumbnail-wrapper">
-                                                                    <div class="thumbnail-div icon-docx"></div>
+                                                                    <div class="icon-docx"></div>
                                                                 </div>
                                                             </div>
                                                             <div class="list-body">
                                                                 <div class="list-title" title="Online Document Name">Online Document Name</div>
                                                                 <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
-                                                                <div class="list-line"><div class="ion-compose"></div>several days ago</div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="progress">
+                                                    <div class="indeterminate"></div>
+                                                </div>                                                  
                                                 <div class="card-actions">
                                                     <button class="btn btn-flat" title="Show More"><span class="ion-more"></span></button>
-                                                </div>										
+                                                </div>	                                             									
                                             </div>
                                             <div class="card">
                                                 <div class="card-header">
@@ -409,6 +402,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="progress">
+                                                    <div class="indeterminate"></div>
+                                                </div>                                                 
                                             </div>									
                                             <div class="card">
                                                 <div class="card-header">
@@ -581,6 +577,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="progress">
+                                                    <div class="indeterminate"></div>
+                                                </div> 
                                             </div>
                                         </div>
                                         <div class="col-xs-12 col-sm-4 col-md-12 col-lg-4">
@@ -629,9 +628,12 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="progress">
+                                                    <div class="indeterminate"></div>
+                                                </div>                                                  
                                                 <div class="card-actions">
                                                     <button class="btn btn-flat" title="Show More"><span class="ion-more"></span></button>
-                                                </div>																						
+                                                </div>                                               																					
                                             </div>
                                             <div class="card">
                                                 <div class="card-header">
@@ -644,9 +646,9 @@
                                                 </div>
                                                 <div class="card-body">
                                                     <div class="list">
-                                                        <section class="subheader">
+                                                        <header class="subheader">
                                                             <div class="subheader-title">No Date</div>
-                                                        </section>
+                                                        </header>
                                                         <div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                             <div class="list-action ion-android-checkbox-outline-blank" data-toggle="tooltip" data-placement="left" title="Not Started"></div>
                                                             <div class="list-icon ion-android-clipboard"></div>
@@ -663,9 +665,9 @@
                                                                 <div class="list-line"><div class="ion-android-cloud"></div>Cloud App</div>
                                                             </div>
                                                         </div>
-                                                        <section class="subheader">
+                                                        <header class="subheader">
                                                             <div class="subheader-title">Today</div>
-                                                        </section>
+                                                        </header>
                                                         <div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                             <div class="list-action ion-android-checkbox" data-toggle="tooltip" data-placement="left" title="Completed"></div>
                                                             <div class="list-icon ion-android-clipboard" title="Completed"></div>
@@ -674,9 +676,9 @@
                                                                 <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
                                                             </div>
                                                         </div>
-                                                        <section class="subheader">
+                                                        <header class="subheader">
                                                             <div class="subheader-title">This Week</div>
-                                                        </section>
+                                                        </header>
                                                         <div class="list-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                             <div class="list-action ion-android-checkbox-outline-blank" data-toggle="tooltip" data-placement="left" title="Not Started"></div>
                                                             <div class="list-icon ion-android-clipboard" title="Not Started"></div>
@@ -687,9 +689,12 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="progress">
+                                                    <div class="indeterminate"></div>
+                                                </div>                                                  
                                                 <div class="card-actions">
                                                     <button class="btn btn-flat" title="Show More"><span class="ion-more"></span></button>
-                                                </div>																																		
+                                                </div>                                               																																		
                                             </div>										
                                         </div>
                                     </div>
@@ -731,7 +736,7 @@
                                                                         <div class="list-action ion-android-checkbox-outline-blank"></div>                                                                             
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-docx"></div>  
+                                                                                <div class="icon-docx"></div>  
                                                                             </div>                                                                              
                                                                         </div>                                                                            
                                                                         <div class="list-body">
@@ -744,7 +749,7 @@
                                                                         <div class="list-action ion-android-checkbox-outline-blank"></div>                           
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-xlsx"></div>  
+                                                                                <div class="icon-xlsx"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                        
                                                                         <div class="list-body">
@@ -757,7 +762,7 @@
                                                                         <div class="list-action ion-android-checkbox-outline-blank"></div>                           
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-pptx"></div>  
+                                                                                <div class="icon-pptx"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                         
                                                                         <div class="list-body">
@@ -770,7 +775,7 @@
                                                                         <div class="list-action ion-android-checkbox-outline-blank"></div>                           
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-one"></div>  
+                                                                                <div class="icon-one"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                   
                                                                         <div class="list-body">
@@ -783,7 +788,7 @@
                                                                         <div class="list-action ion-android-checkbox-outline-blank"></div>                           
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-pdf"></div>  
+                                                                                <div class="icon-pdf"></div>  
                                                                             </div>                                                                             
                                                                         </div>
                                                                         <div class="list-body">
@@ -803,13 +808,13 @@
 												</div>
 											</div>                                              
                                             <div class="list">
-                                                <section class="subheader">
+                                                <header class="subheader">
                                                     <div class="subheader-title">Today</div>
-                                                </section>                                                
+                                                </header>                                                
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-pdf"></div>
+                                                            <div class="icon-pdf"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -820,7 +825,7 @@
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-docx"></div>
+                                                            <div class="icon-docx"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -831,7 +836,7 @@
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-docx"></div>
+                                                            <div class="icon-docx"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -842,7 +847,7 @@
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-pdf"></div>
+                                                            <div class="icon-pdf"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -850,13 +855,13 @@
                                                         <div class="list-line"><div class="ion-social-google"></div>Google Drive</div>
                                                     </div>
                                                 </div>                                                
-                                                <section class="subheader">
+                                                <header class="subheader">
                                                     <div class="subheader-title">Yesterday</div>
-                                                </section>       
+                                                </header>       
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-pdf"></div>
+                                                            <div class="icon-pdf"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -867,7 +872,7 @@
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-docx"></div>
+                                                            <div class="icon-docx"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -878,7 +883,7 @@
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-docx"></div>
+                                                            <div class="icon-docx"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -886,13 +891,13 @@
                                                         <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
                                                     </div>
                                                 </div>                                                
-                                                <section class="subheader">
+                                                <header class="subheader">
                                                     <div class="subheader-title">Last Week</div>
-                                                </section>                                                     
+                                                </header>                                                     
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-docx"></div>
+                                                            <div class="icon-docx"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -903,7 +908,7 @@
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-pdf"></div>
+                                                            <div class="icon-pdf"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -914,7 +919,7 @@
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-pdf"></div>
+                                                            <div class="icon-pdf"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -925,7 +930,7 @@
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-docx"></div>
+                                                            <div class="icon-docx"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -933,13 +938,13 @@
                                                         <div class="list-line"><div class="ion-sharepoint"></div>Office 365</div>
                                                     </div>
                                                 </div>
-                                                <section class="subheader">
+                                                <header class="subheader">
                                                     <div class="subheader-title">Older</div>
-                                                </section>                                                     
+                                                </header>                                                     
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-docx"></div>
+                                                            <div class="icon-docx"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -950,7 +955,7 @@
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-pdf"></div>
+                                                            <div class="icon-pdf"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -961,7 +966,7 @@
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-pdf"></div>
+                                                            <div class="icon-pdf"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -972,7 +977,7 @@
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-docx"></div>
+                                                            <div class="icon-docx"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -983,7 +988,7 @@
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-docx"></div>
+                                                            <div class="icon-docx"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -994,7 +999,7 @@
                                                 <div class="list-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                     <div class="list-icon">
                                                         <div class="thumbnail-wrapper">
-                                                            <div class="thumbnail-div icon-pdf"></div>
+                                                            <div class="icon-pdf"></div>
                                                         </div>
                                                     </div>
                                                     <div class="list-body">
@@ -1668,9 +1673,9 @@
 										</div>
 										<div class="card-body">
 											<div class="grid-list">
-												<section class="subheader">
+												<header class="subheader">
 													<div class="subheader-title">Company Apps</div>
-												</section>
+												</header>
 												<div class="row">
 													<div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
 														<a class="thumbnail-wrapper square bordered b-white" href="#">
@@ -1769,9 +1774,9 @@
 														</a>
 													</div>												
 												</div>
-                                                <section class="subheader">
+                                                <header class="subheader">
                                                     <div class="subheader-title">Social Apps</div>
-                                                </section>
+                                                </header>
                                                 <div class="row">
                                                     <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
                                                         <a class="thumbnail-wrapper square bordered b-white tile-accentColor-blue" href="#">
@@ -1930,9 +1935,9 @@
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <section class="subheader">
+                                                <header class="subheader">
                                                     <div class="subheader-title">Developer Apps</div>
-                                                </section>	
+                                                </header>	
 												<div class="row">
                                                     <div class="grid-item col-xs-6 col-sm-4 col-md-3 col-lg-2">
                                                         <a class="thumbnail-wrapper square bordered b-white tile-accentColor-orangeLight" href="#">
@@ -2413,16 +2418,7 @@
                                                                 <div class="chip">
                                                                     <div class="ion-android-cancel float-r"></div>
                                                                     <span>Inside Sales</span>
-                                                                </div>	   
-                                                                <div class="chip chip-with-icon">
-                                                                    <div class="ion-android-cancel float-r"></div>
-                                                                    <div class="chip-icon float-l">
-                                                                        <div class="thumbnail-wrapper chip-letter circular tile-accentColor-purple">
-                                                                            <span class="ion-android-search"></span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <span>David</span>
-                                                                </div>                                                                                                                             										
+                                                                </div>	                                                                                                                               										
                                                             </div>
 														</li>
 													</ul>
@@ -3597,18 +3593,12 @@
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget ipsum luctus neque tempor facilisis ut at nunc. Vestibulum id tempus mauris.</p>
                                         <p>Fusce facilisis suscipit felis, vel egestas enim ornare non. Phasellus vitae sem eu neque posuere tincidunt. Nunc elementum lectus dolor, sit amet tempus lectus facilisis id.</p>
                                         <ul class="icon-ul">
-                                            <li class="ion-android-home"></li>
-                                            <li>Suspendisse placerat dui a porta commodo. Integer vulputate scelerisque urna, non volutpat nunc lacinia in.</li>
-                                            <li class="ion-android-cloud"></li>
-                                            <li>Pellentesque id sodales turpis. Morbi pretium nisi mauris, sed egestas sapien volutpat in.</li>
-                                            <li class="ion-android-document"></li>
-                                            <li>Quisque vulputate pellentesque ipsum sed pharetra. Donec est nibh, maximus ac metus vel, commodo vestibulum est.</li>
-                                            <li class="ion-android-person"></li>
-                                            <li>Mauris euismod dui a turpis congue ullamcorper.</li>
-                                            <li class="ion-android-options"></li>
-                                            <li>Morbi aliquam hendrerit feugiat. Donec in congue nibh, a dapibus sapien.</li>
-                                            <li class="ion-android-list"></li>
-                                            <li>Etiam vitae placerat ligula. Aliquam scelerisque diam dolor, ac rhoncus arcu vulputate in. Integer non ornare lectus.</li>
+                                            <li><span class="ion-android-home"></span><span>Suspendisse placerat dui a porta commodo. Integer vulputate scelerisque urna, non volutpat nunc lacinia in.</span></li>
+                                            <li><span class="ion-android-cloud"></span><span>Pellentesque id sodales turpis. Morbi pretium nisi mauris, sed egestas sapien volutpat in.</span></li>
+                                            <li><span class="ion-android-document"></span><span>Quisque vulputate pellentesque ipsum sed pharetra. Donec est nibh, maximus ac metus vel, commodo vestibulum est.</span></li>
+                                            <li><span class="ion-android-person"></span><span>Mauris euismod dui a turpis congue ullamcorper.</span></li>
+                                            <li><span class="ion-android-options"></span><span>Morbi aliquam hendrerit feugiat. Donec in congue nibh, a dapibus sapien.</span></li>
+                                            <li><span class="ion-android-list"></span><span>Etiam vitae placerat ligula. Aliquam scelerisque diam dolor, ac rhoncus arcu vulputate in. Integer non ornare lectus.</span></li>
                                         </ul>
                                     </div>
                                     <div class="dialog-actions">
@@ -3644,21 +3634,19 @@
                                     </div>
                                     <div class="dialog-toolbar">
                                         <button class="btn">
-                                            <div class="ion-android-person ion-with-text">View Profile</div>
+                                            <span class="ion-android-person"></span><span>View Profile</span>
                                         </button>
                                         <button class="btn">
-                                            <div class="ion-social-skype ion-with-text">Call on Skype</div>
+                                            <span class="ion-social-skype"></span><span>Call on Skype</span>
                                         </button>
                                         <button class="btn">
-                                            <div class="ion-android-mail ion-with-text">Send Email</div>
+                                            <span class="ion-android-mail"></span><span>Send Email</span>
                                         </button>
                                     </div>
                                     <div class="dialog-content">
                                         <ul class="icon-ul">
-                                            <li class="ion-android-call"></li>
-                                            <li>+1 (555) 555-5555</li>
-                                            <li class="ion-android-mail"></li>
-                                            <li>davidlopez@contoso.com</li>
+                                            <li><span class="ion-android-call"></span><span>+1 (555) 555-5555</span></li>
+                                            <li><span class="ion-android-mail"></span><span>davidlopez@contoso.com</span></li>
                                         </ul>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, ligula non congue mattis, ligula velit dictum orci, nec maximus nulla nisi vitae leo. Donec ut dolor quis lectus finibus sodales quis sit amet neque. Nam lorem elit, feugiat ac diam id, maximus ullamcorper nisi.
@@ -4633,7 +4621,7 @@
                                             <div class="list-action ion-android-checkbox-outline-blank"></div>                                                                             
                                             <div class="list-icon">
                                                 <div class="thumbnail-wrapper">
-                                                    <div class="thumbnail-div icon-docx"></div>  
+                                                    <div class="icon-docx"></div>  
                                                 </div>                                                                              
                                             </div>                                                                            
                                             <div class="list-body">
@@ -4646,7 +4634,7 @@
                                             <div class="list-action ion-android-checkbox-outline-blank"></div>                           
                                             <div class="list-icon">
                                                 <div class="thumbnail-wrapper">
-                                                    <div class="thumbnail-div icon-xlsx"></div>  
+                                                    <div class="icon-xlsx"></div>  
                                                 </div>                                                                             
                                             </div>                                                                        
                                             <div class="list-body">
@@ -4659,7 +4647,7 @@
                                             <div class="list-action ion-android-checkbox-outline-blank"></div>                           
                                             <div class="list-icon">
                                                 <div class="thumbnail-wrapper">
-                                                    <div class="thumbnail-div icon-pptx"></div>  
+                                                    <div class="icon-pptx"></div>  
                                                 </div>                                                                             
                                             </div>                                                                         
                                             <div class="list-body">
@@ -4672,7 +4660,7 @@
                                             <div class="list-action ion-android-checkbox-outline-blank"></div>                           
                                             <div class="list-icon">
                                                 <div class="thumbnail-wrapper">
-                                                    <div class="thumbnail-div icon-one"></div>  
+                                                    <div class="icon-one"></div>  
                                                 </div>                                                                             
                                             </div>                                                                   
                                             <div class="list-body">
@@ -4685,7 +4673,7 @@
                                             <div class="list-action ion-android-checkbox-outline-blank"></div>                           
                                             <div class="list-icon">
                                                 <div class="thumbnail-wrapper">
-                                                    <div class="thumbnail-div icon-pdf"></div>  
+                                                    <div class="icon-pdf"></div>  
                                                 </div>                                                                             
                                             </div>
                                             <div class="list-body">
@@ -4950,7 +4938,7 @@
                                                                     <div class="list-item">                                                                         
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-docx"></div>  
+                                                                                <div class="icon-docx"></div>  
                                                                             </div>                                                                              
                                                                         </div>                                                                            
                                                                         <div class="list-body">
@@ -4962,7 +4950,7 @@
                                                                     <div class="list-item">                         
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-xlsx"></div>  
+                                                                                <div class="icon-xlsx"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                        
                                                                         <div class="list-body">
@@ -4974,7 +4962,7 @@
                                                                     <div class="list-item">                       
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-pptx"></div>  
+                                                                                <div class="icon-pptx"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                         
                                                                         <div class="list-body">
@@ -4986,7 +4974,7 @@
                                                                     <div class="list-item">                       
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-one"></div>  
+                                                                                <div class="icon-one"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                   
                                                                         <div class="list-body">
@@ -4998,7 +4986,7 @@
                                                                     <div class="list-item">                       
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-pdf"></div>  
+                                                                                <div class="icon-pdf"></div>  
                                                                             </div>                                                                             
                                                                         </div>
                                                                         <div class="list-body">
@@ -5066,7 +5054,7 @@
                                                                     <div class="list-item">                                                                            
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-docx"></div>  
+                                                                                <div class="icon-docx"></div>  
                                                                             </div>                                                                              
                                                                         </div>                                                                            
                                                                         <div class="list-body">
@@ -5078,7 +5066,7 @@
                                                                     <div class="list-item">                        
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-xlsx"></div>  
+                                                                                <div class="icon-xlsx"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                        
                                                                         <div class="list-body">
@@ -5090,7 +5078,7 @@
                                                                     <div class="list-item">                          
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-pptx"></div>  
+                                                                                <div class="icon-pptx"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                         
                                                                         <div class="list-body">
@@ -5102,7 +5090,7 @@
                                                                     <div class="list-item">                          
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-one"></div>  
+                                                                                <div class="icon-one"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                   
                                                                         <div class="list-body">
@@ -5114,7 +5102,7 @@
                                                                     <div class="list-item">                         
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-pdf"></div>  
+                                                                                <div class="icon-pdf"></div>  
                                                                             </div>                                                                             
                                                                         </div>
                                                                         <div class="list-body">
@@ -5182,7 +5170,7 @@
                                                                     <div class="list-item">                                                                            
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-docx"></div>  
+                                                                                <div class="icon-docx"></div>  
                                                                             </div>                                                                              
                                                                         </div>                                                                            
                                                                         <div class="list-body">
@@ -5194,7 +5182,7 @@
                                                                     <div class="list-item">                           
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-xlsx"></div>  
+                                                                                <div class="icon-xlsx"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                        
                                                                         <div class="list-body">
@@ -5206,7 +5194,7 @@
                                                                     <div class="list-item">                          
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-pptx"></div>  
+                                                                                <div class="icon-pptx"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                         
                                                                         <div class="list-body">
@@ -5218,7 +5206,7 @@
                                                                     <div class="list-item">                         
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-one"></div>  
+                                                                                <div class="icon-one"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                   
                                                                         <div class="list-body">
@@ -5230,7 +5218,7 @@
                                                                     <div class="list-item">                        
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-pdf"></div>  
+                                                                                <div class="icon-pdf"></div>  
                                                                             </div>                                                                             
                                                                         </div>
                                                                         <div class="list-body">
@@ -5298,7 +5286,7 @@
                                                                     <div class="list-item">                                                                           
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-docx"></div>  
+                                                                                <div class="icon-docx"></div>  
                                                                             </div>                                                                              
                                                                         </div>                                                                            
                                                                         <div class="list-body">
@@ -5310,7 +5298,7 @@
                                                                     <div class="list-item">                       
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-xlsx"></div>  
+                                                                                <div class="icon-xlsx"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                        
                                                                         <div class="list-body">
@@ -5322,7 +5310,7 @@
                                                                     <div class="list-item">                           
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-pptx"></div>  
+                                                                                <div class="icon-pptx"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                         
                                                                         <div class="list-body">
@@ -5334,7 +5322,7 @@
                                                                     <div class="list-item">                          
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-one"></div>  
+                                                                                <div class="icon-one"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                   
                                                                         <div class="list-body">
@@ -5346,7 +5334,7 @@
                                                                     <div class="list-item">                       
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-pdf"></div>  
+                                                                                <div class="icon-pdf"></div>  
                                                                             </div>                                                                             
                                                                         </div>
                                                                         <div class="list-body">
@@ -5414,7 +5402,7 @@
                                                                     <div class="list-item">                                                                           
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-docx"></div>  
+                                                                                <div class="icon-docx"></div>  
                                                                             </div>                                                                              
                                                                         </div>                                                                            
                                                                         <div class="list-body">
@@ -5426,7 +5414,7 @@
                                                                     <div class="list-item">                          
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-xlsx"></div>  
+                                                                                <div class="icon-xlsx"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                        
                                                                         <div class="list-body">
@@ -5438,7 +5426,7 @@
                                                                     <div class="list-item">                          
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-pptx"></div>  
+                                                                                <div class="icon-pptx"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                         
                                                                         <div class="list-body">
@@ -5450,7 +5438,7 @@
                                                                     <div class="list-item">                          
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-one"></div>  
+                                                                                <div class="icon-one"></div>  
                                                                             </div>                                                                             
                                                                         </div>                                                                   
                                                                         <div class="list-body">
@@ -5463,7 +5451,7 @@
                          
                                                                         <div class="list-icon">
                                                                             <div class="thumbnail-wrapper">
-                                                                                <div class="thumbnail-div icon-pdf"></div>  
+                                                                                <div class="icon-pdf"></div>  
                                                                             </div>                                                                             
                                                                         </div>
                                                                         <div class="list-body">
@@ -5518,7 +5506,7 @@
                         </div>
                         <div class="col-sm-12 col-md-9">
                             <div class="component component-with-dialog">
-                                <div class="menu">
+                                <div class="menu mobile">
                                     <div class="list">
                                         <div class="list-item">                                                                   
                                             <div class="list-body">
@@ -5526,7 +5514,79 @@
                                                     Open
                                                 </div>
                                             </div>
-                                        </div>                                                
+                                        </div>   
+                                        <div class="list-item">
+                                            <div class="list-action ion-android-arrow-dropdown"></div>                                                                 
+                                            <div class="list-body">
+                                                <div class="list-title" title="Open With">
+                                                    Open With
+                                                </div>                                                   
+                                            </div>    
+                                            <div class="menu">
+                                                <div class="list">
+                                                    <div class="list-item">                                                                            
+                                                        <div class="list-icon">
+                                                            <div class="thumbnail-wrapper">
+                                                                <div class="icon-docx"></div>  
+                                                            </div>                                                                              
+                                                        </div>                                                                            
+                                                        <div class="list-body">
+                                                            <div class="list-title" title="Word">
+                                                                Word
+                                                            </div>
+                                                        </div>
+                                                    </div>    
+                                                    <div class="list-item">                       
+                                                        <div class="list-icon">
+                                                            <div class="thumbnail-wrapper">
+                                                                <div class="icon-xlsx"></div>  
+                                                            </div>                                                                             
+                                                        </div>                                                                        
+                                                        <div class="list-body">
+                                                            <div class="list-title" title="Excel">
+                                                                Excel
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-item">                       
+                                                        <div class="list-icon">
+                                                            <div class="thumbnail-wrapper">
+                                                                <div class="icon-pptx"></div>  
+                                                            </div>                                                                             
+                                                        </div>                                                                         
+                                                        <div class="list-body">
+                                                            <div class="list-title" title="PowerPoint">
+                                                                PowerPoint
+                                                            </div>
+                                                        </div>
+                                                    </div>   
+                                                    <div class="list-item">                      
+                                                        <div class="list-icon">
+                                                            <div class="thumbnail-wrapper">
+                                                                <div class="icon-one"></div>  
+                                                            </div>                                                                             
+                                                        </div>                                                                   
+                                                        <div class="list-body">
+                                                            <div class="list-title" title="OneNote">
+                                                                OneNote
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="list-item">                       
+                                                        <div class="list-icon">
+                                                            <div class="thumbnail-wrapper">
+                                                                <div class="icon-pdf"></div>  
+                                                            </div>                                                                             
+                                                        </div>
+                                                        <div class="list-body">
+                                                            <div class="list-title" title="PDF">
+                                                                PDF
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                                                                          
+                                        </div>                                                                                      
                                         <div class="list-item">                                                                     
                                             <div class="list-body">
                                                 <div class="list-title" title="Edit">
@@ -5574,7 +5634,7 @@
                                                     <div class="list-item">                                                                            
                                                         <div class="list-icon">
                                                             <div class="thumbnail-wrapper">
-                                                                <div class="thumbnail-div icon-docx"></div>  
+                                                                <div class="icon-docx"></div>  
                                                             </div>                                                                              
                                                         </div>                                                                            
                                                         <div class="list-body">
@@ -5586,7 +5646,7 @@
                                                     <div class="list-item">                       
                                                         <div class="list-icon">
                                                             <div class="thumbnail-wrapper">
-                                                                <div class="thumbnail-div icon-xlsx"></div>  
+                                                                <div class="icon-xlsx"></div>  
                                                             </div>                                                                             
                                                         </div>                                                                        
                                                         <div class="list-body">
@@ -5598,7 +5658,7 @@
                                                     <div class="list-item">                       
                                                         <div class="list-icon">
                                                             <div class="thumbnail-wrapper">
-                                                                <div class="thumbnail-div icon-pptx"></div>  
+                                                                <div class="icon-pptx"></div>  
                                                             </div>                                                                             
                                                         </div>                                                                         
                                                         <div class="list-body">
@@ -5610,7 +5670,7 @@
                                                     <div class="list-item">                      
                                                         <div class="list-icon">
                                                             <div class="thumbnail-wrapper">
-                                                                <div class="thumbnail-div icon-one"></div>  
+                                                                <div class="icon-one"></div>  
                                                             </div>                                                                             
                                                         </div>                                                                   
                                                         <div class="list-body">
@@ -5622,7 +5682,7 @@
                                                     <div class="list-item">                       
                                                         <div class="list-icon">
                                                             <div class="thumbnail-wrapper">
-                                                                <div class="thumbnail-div icon-pdf"></div>  
+                                                                <div class="icon-pdf"></div>  
                                                             </div>                                                                             
                                                         </div>
                                                         <div class="list-body">
