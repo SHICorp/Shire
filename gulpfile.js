@@ -6,10 +6,13 @@ var cleanCss = require('gulp-clean-css');
 var less = require('gulp-less');
 var rename = require('gulp-rename');
 var webserver = require('gulp-webserver');
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('compileLess', function() {
     return gulp.src('./src/less/**/*.less')
+        .pipe(sourcemaps.init())
         .pipe(less())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./dist/css'));
 });
 

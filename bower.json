@@ -26,12 +26,7 @@
     "bower_components",
     "test",
     "tests",
-    ".vscode",
-    "src",
-    "docs",
-    "gulpfile.js",
-    "package.json",
-    "app.js"
+    ".vscode"
   ],
   "dependencies": {
     "bootstrap": "^3.3.6",

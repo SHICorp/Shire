@@ -14,6 +14,7 @@
     "gulp-less": "~3.1.0",
     "gulp-rename": "~1.2.2",
     "bower": "^1.7.9",
-    "gulp-webserver": "^0.9.1"
+    "gulp-webserver": "^0.9.1",
+    "gulp-sourcemaps": "~1.6.0"
   }
 }
