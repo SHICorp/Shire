@@ -87,7 +87,7 @@ main {
 content {
   padding: 30px 15px 20px 15px;
   top: 0;
-  left: 0;
+  left: 48px;
   right: 0;
   bottom: 0;
   position: absolute;
@@ -96,6 +96,7 @@ content {
 @media (min-width: 992px) {
   content {
     right: 0;
+    left: 0;
   }
 }
 header.header + content {
@@ -156,17 +157,49 @@ content ul > li {
   font-weight: 400;
   content: "\e072";
 }
+.ion-office365:before {
+  font-family: SPO365Icons;
+  font-size: 18px;
+  color: #262d40;
+  font-weight: 400;
+  content: "\e160";
+}
+.ion-outlook:before {
+  font-family: SPO365Icons;
+  font-size: 18px;
+  color: #262d40;
+  font-weight: 400;
+  content: "\e062";
+}
+.ion-onedrive:before {
+  font-family: SPO365Icons;
+  font-size: 18px;
+  color: #262d40;
+  font-weight: 400;
+  content: "\e016";
+}
 /* NAV */
 nav {
   height: 100%;
   width: 250px;
   float: left;
   background: #4791d2;
-  display: none;
+  display: block;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
 }
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   nav {
-    display: block;
+    float: none;
+    position: absolute;
+    z-index: 1101;
+    top: 0;
+    bottom: 0;
+    left: 0;
   }
 }
 nav ul {
@@ -243,6 +276,15 @@ nav ul ul.sub-menu > li > a:hover {
 .profile {
   position: relative;
 }
+.profile > img {
+  width: 250px;
+  display: block;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
 .image-toolbar {
   position: absolute;
   width: 100%;
@@ -250,29 +292,62 @@ nav ul ul.sub-menu > li > a:hover {
   background: -webkit-linear-gradient(top, rgba(2, 0, 0, 0.3333) 0%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(to bottom, rgba(2, 0, 0, 0.3333) 0%, rgba(0, 0, 0, 0) 100%);
 }
-.image-toolbar .btn *[class*="ion-"]:before {
+.image-toolbar .btn *[class*="ion-"]:before,
+.image-toolbar .btn:hover *[class*="ion-"]:before {
   color: #fff;
 }
 .image-toolbar .btn:active,
 .image-toolbar .btn:focus {
   background: transparent;
 }
-.profile .btn-float {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+body.nav-closed > nav {
+  width: 48px;
+}
+body.nav-closed > nav ul > li > a {
+  padding: 10px;
+}
+body.nav-closed > nav ul > li > a .nav-icon {
+  float: none;
+}
+body.nav-closed > nav ul > li > a .nav-title {
+  display: none;
+}
+body.nav-closed > nav ul > li > a > [class*=ion-]:before {
+  margin-left: 0;
+}
+body.nav-closed .profile > * {
+  display: none;
+}
+body.nav-closed .profile > img {
+  width: 48px;
+  display: block;
   visibility: hidden;
 }
-.profile:hover .btn-float {
-  visibility: visible;
+body.nav-closed .profile > .image-toolbar {
+  display: block;
+  background: transparent;
+}
+body.nav-closed .profile > .image-toolbar > .btn {
+  background: #262d40;
+}
+body.nav-closed > nav .scroll-wrapper > ul.scroll-content {
+  padding-top: 0 !important;
+}
+body.nav-closed .header {
+  left: 48px;
 }
 /* HEADER */
 header.header {
   position: fixed;
   right: 0;
   top: 0;
-  left: 0;
-  z-index: 99999;
+  left: 48px;
+  z-index: 1100;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
 }
 @media (min-width: 992px) {
   header.header {
@@ -293,6 +368,9 @@ header.header {
 }
 .appbar:after {
   clear: both;
+}
+.appbar .btn {
+  box-shadow: none;
 }
 .appbar > div {
   font-weight: normal;
@@ -338,11 +416,6 @@ header.header {
 @media (min-width: 992px) {
   .send-feedback {
     display: block;
-  }
-}
-@media (min-width: 992px) {
-  .toggle-nav {
-    display: none;
   }
 }
 /* Sidebar */
@@ -1794,7 +1867,32 @@ header.header {
   box-shadow: none;
   border: none;
 }
-/* Media Queries */
+.menu.mobile .list {
+  padding: 0;
+}
+.menu.mobile > .list > .list-item {
+  border-bottom: solid 1px #e9e9e9;
+}
+.menu.mobile > .list > .list-item:last-child {
+  border-bottom: none;
+}
+.menu.mobile > .list > .list-item.expandable {
+  padding: 0;
+}
+.menu.mobile > .list > .list-item.expandable > .list-body {
+  padding: 8px 12px;
+}
+.menu.mobile > .list > .list-item.expandable > .list-icon {
+  padding: 8px 12px;
+  padding-right: 0;
+}
+.menu.mobile > .list > .list-item.expandable > .list-action {
+  padding: 8px 12px;
+  padding-left: 0;
+}
+.iframe-content > .card {
+  margin-bottom: 0;
+}
 @media (min-width: 992px) {
   .iframe-content {
     display: block;

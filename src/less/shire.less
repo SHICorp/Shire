@@ -129,14 +129,15 @@ main {
 content {
     padding: 30px 15px 20px 15px;
     top: 0;
-    left: 0;
+    left: 48px;
     right: 0;
     bottom: 0;
     position: absolute;
     overflow-y: auto;
 
     @media (min-width: 992px) {
-        right: 0;     
+        right: 0; 
+        left: 0;    
     }
 }
 header.header + content {
@@ -189,6 +190,21 @@ content ul > li {
 
     content: "\e072"; 
 }
+.ion-office365:before {
+    .SPIcons();
+    
+    content: "\e160";
+}
+.ion-outlook:before {
+    .SPIcons();
+
+    content: "\e062";
+}
+.ion-onedrive:before {
+    .SPIcons();
+
+    content: "\e016";
+}
 
 /* NAV */
 nav {
@@ -196,11 +212,22 @@ nav {
     width: 250px;
     float: left;
     background: @primary;
-    display: none;
+    display: block;
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.2);
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
 
-    @media (min-width: 992px) {
-        display: block;      
-    }
+    @media (max-width: 992px) {
+        float: none;
+        position: absolute;
+        z-index: 1101;
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }     
 }
 nav ul {
     margin: 0;
@@ -275,7 +302,16 @@ nav ul ul.sub-menu > li > a {
     }
 }
 .profile {
-    position: relative;
+    position: relative;    
+}
+.profile > img {
+    width: 250px;
+    display: block;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;     
 }
 .image-toolbar {
     position: absolute;
@@ -284,21 +320,54 @@ nav ul ul.sub-menu > li > a {
     background: -webkit-linear-gradient(top, rgba(2,0,0,0.3333) 0%,rgba(0,0,0,0) 100%);
     background: linear-gradient(to bottom, rgba(2,0,0,0.3333) 0%,rgba(0,0,0,0) 100%);    
 }
-.image-toolbar .btn *[class*="ion-"]:before {
+.image-toolbar .btn *[class*="ion-"]:before,
+.image-toolbar .btn:hover *[class*="ion-"]:before {
     color: #fff;
 }
 .image-toolbar .btn:active,
 .image-toolbar .btn:focus {
     background: transparent;
 }
-.profile .btn-float {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    visibility:hidden;
+body.nav-closed > nav {
+    width: 48px;
+
+    ul > li > a {
+        padding: 10px;
+
+        .nav-icon {
+            float: none;
+        }
+        .nav-title {
+            display: none;
+        }
+        >[class*=ion-] {
+            &:before {
+                margin-left: 0;
+            }
+        }
+    }
 }
-.profile:hover .btn-float {
-    visibility: visible;
+body.nav-closed .profile > * {
+    display: none;
+}
+body.nav-closed .profile > img {
+    width: 48px;  
+    display: block;
+    visibility: hidden;
+}
+body.nav-closed .profile > .image-toolbar {
+    display: block;
+    background: transparent;
+
+    > .btn {
+        background: @secondary;
+    }
+}
+body.nav-closed > nav .scroll-wrapper > ul.scroll-content {
+    padding-top: 0 !important;
+}
+body.nav-closed .header {
+    left: 48px;
 }
 
 /* HEADER */
@@ -306,8 +375,13 @@ header.header {
     position: fixed;
     right: 0;
     top: 0;
-    left: 0;
-    z-index: 99999;
+    left: 48px;
+    z-index: 1100;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;  
 
     @media (min-width: 992px) {
         position: fixed;
@@ -320,6 +394,10 @@ header.header {
     background: @primary;
     color: @primaryText;
     box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2);
+
+    .btn {
+        box-shadow: none;
+    }
 }
 .appbar > div {
     font-weight: normal;
@@ -367,11 +445,6 @@ header.header {
 
     @media (min-width: 992px) {
         display: block;
-    }
-}
-.toggle-nav {
-    @media (min-width: 992px) {
-        display: none;
     }
 }
 
@@ -1866,15 +1939,42 @@ header.header {
     box-shadow: none;
     border: none;
 }
-
-/* Media Queries */
-@media (min-width: 992px) {
-    .iframe-content {
-        display: block;
-    }     
+.menu.mobile .list {
+    padding: 0;
 }
-@media (min-width: 1199px) {
-    .iframe-content {
+.menu.mobile > .list > .list-item {
+    border-bottom: solid 1px @border;
+
+    &:last-child {
+        border-bottom: none;
+    }    
+}
+
+.menu.mobile > .list > .list-item.expandable {
+    padding: 0;
+
+    > .list-body {
+       padding: 8px 12px; 
+    }
+    > .list-icon {
+        padding: 8px 12px;
+        padding-right: 0;
+    }
+    > .list-action {
+        padding: 8px 12px;
+        padding-left: 0;
+    }
+}
+
+.iframe-content {
+    > .card {
+        margin-bottom: 0;
+    }
+
+    @media (min-width: 992px) {
+        display: block;
+    }
+    @media (min-width: 1199px) {
         width: 450px;
     }
 }
