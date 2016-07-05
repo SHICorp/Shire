@@ -9,7 +9,7 @@ var webserver = require('gulp-webserver');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('compileLess', function() {
-    return gulp.src('./src/less/**/*.less')
+    return gulp.src('./src/less/shire.less')
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(sourcemaps.write('.'))
