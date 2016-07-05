@@ -852,37 +852,37 @@ content ul > li {
   padding: 4px 0;
 }
 .iframe-content {
-  width: 300px;
+  width: 250px;
   margin-left: 30px;
   float: right;
   display: none;
 }
-.icon-ul {
+.ul-icon {
   zoom: 1;
   margin: 0;
   padding: 0;
   padding-left: 10px;
   list-style-type: none;
 }
-.icon-ul:before,
-.icon-ul:after {
+.ul-icon:before,
+.ul-icon:after {
   content: "";
   display: table;
 }
-.icon-ul:after {
+.ul-icon:after {
   clear: both;
 }
-.icon-ul > li {
+.ul-icon > li {
   min-height: 25px;
   line-height: 1.5em;
   padding: 4px 0;
   overflow: hidden;
 }
-.icon-ul > li > * {
+.ul-icon > li > * {
   overflow: hidden;
   display: block;
 }
-.icon-ul > li > *[class*="ion-"] {
+.ul-icon > li > *[class*="ion-"] {
   display: block;
   overflow: visible;
   float: left;
@@ -890,7 +890,7 @@ content ul > li {
   width: 20px;
   padding: 0;
 }
-.icon-ul > li > *[class*="ion-"]:before {
+.ul-icon > li > *[class*="ion-"]:before {
   color: #4791d2;
 }
 .ion-sharepoint:before {
