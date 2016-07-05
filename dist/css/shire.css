@@ -29,7 +29,7 @@ body {
 *[class*="ion-"]:before {
   font-size: 18px;
 }
-*.ion-active[class*="ion"]:before {
+*.ion-active[class*="ion-"]:before {
   color: #4791d2 !important;
 }
 .ion-android-star.ion-active:before {
@@ -312,7 +312,7 @@ body.nav-closed > nav ul > li > a .nav-icon {
 body.nav-closed > nav ul > li > a .nav-title {
   display: none;
 }
-body.nav-closed > nav ul > li > a > [class*=ion-]:before {
+body.nav-closed > nav ul > li > a > [class*="ion-"]:before {
   margin-left: 0;
 }
 body.nav-closed .profile > * {
@@ -1319,7 +1319,7 @@ header.header {
 .dialog-toolbar > .btn:last-child {
   margin-right: 0;
 }
-.dialog-toolbar .ion-with-text {
+.dialog-toolbar .icon-with-text {
   padding: 0;
 }
 .dialog ul {
@@ -1807,7 +1807,7 @@ header.header {
 .menu .list > .list-item:hover,
 .menu .list > .list-item:focus,
 .menu .list > .list-item:active {
-  background: #f2f2f2;
+  background: #fff;
 }
 .menu-header *[class*="ion-"] {
   float: left;
