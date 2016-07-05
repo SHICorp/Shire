@@ -1,10 +1,3 @@
-@font-face {
-  font-family: SPO365Icons;
-  src: url(../fonts/Office365Icons.eot);
-  src: url(../fonts/Office365Icons.eot?#iefix) format("embedded-opentype"), url(../fonts/Office365Icons.woff) format("woff"), url(../fonts/Office365Icons.ttf) format("truetype"), url(../fonts/Office365Icons.svg#web) format("svg");
-  font-style: normal;
-  font-weight: 400;
-}
 .scroll-wrapper {
   overflow: hidden !important;
   padding: 0 !important;
@@ -747,6 +740,13 @@
 }
 .scrollbar-chrome > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {
   top: -19px;
+}
+@font-face {
+  font-family: SPO365Icons;
+  src: url(../fonts/Office365Icons.eot);
+  src: url(../fonts/Office365Icons.eot?#iefix) format("embedded-opentype"), url(../fonts/Office365Icons.woff) format("woff"), url(../fonts/Office365Icons.ttf) format("truetype"), url(../fonts/Office365Icons.svg#web) format("svg");
+  font-style: normal;
+  font-weight: 400;
 }
 /* Functions */
 /* GLOBAL */
