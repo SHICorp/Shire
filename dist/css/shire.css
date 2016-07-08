@@ -1039,6 +1039,9 @@ nav ul ul.sub-menu > li > a:hover {
 .image-toolbar .btn:hover *[class*="ion-"]:before {
   color: #fff;
 }
+.image-toolbar .btn-flat > [class*="icon-"] {
+  line-height: 25px;
+}
 .image-toolbar .btn:active,
 .image-toolbar .btn:focus {
   background: transparent;
