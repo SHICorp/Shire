@@ -29,8 +29,11 @@
     ".vscode"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.6",
+    "bootstrap": "v4.0.0-alpha.3",
     "Ionicons": "ionicons#^2.0.1",
     "jquery": "1.9.1 - 2"
+  },
+  "devDependencies": {
+    "bootstrap": "v4.0.0-alpha.3"
   }
 }
