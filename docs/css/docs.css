@@ -37,3 +37,10 @@ content .page-content {
 .profile:hover .btn-float {
     visibility: visible;
 }
+.example {
+    background: #fff;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    margin-bottom: 30px;    
+}
