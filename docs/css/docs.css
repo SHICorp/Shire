@@ -44,3 +44,13 @@ content .page-content {
     position: relative;
     margin-bottom: 30px;    
 }
+
+.card-image.cloud-climb {
+    background: #4791d2;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.cloud-climb img {
+    max-width: 50%;
+}

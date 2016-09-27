@@ -797,6 +797,9 @@ button:active,
   outline: 0 !important;
   border: none;
 }
+h1 {
+  margin-bottom: 20px;
+}
 .small {
   font-size: 85%;
 }
@@ -830,20 +833,26 @@ main {
 content {
   padding: 30px 15px 20px 15px;
   top: 0;
-  left: 48px;
+  left: 0;
   right: 0;
   bottom: 0;
   position: absolute;
   overflow-y: auto;
 }
+nav + main content {
+  left: 48px;
+}
 @media (min-width: 992px) {
-  content {
+  nav + main content {
     right: 0;
     left: 0;
   }
 }
 header.header + content {
   top: 42px;
+}
+header.header-large + content {
+  top: 62px;
 }
 content p {
   line-height: 1.5em;
@@ -1087,7 +1096,7 @@ header.header {
   position: fixed;
   right: 0;
   top: 0;
-  left: 48px;
+  left: 0;
   z-index: 1100;
   -webkit-transition: all .25s ease;
   -moz-transition: all .25s ease;
@@ -1095,8 +1104,11 @@ header.header {
   -o-transition: all .25s ease;
   transition: all .25s ease;
 }
+nav + main header.header {
+  left: 48px;
+}
 @media (min-width: 992px) {
-  header.header {
+  nav + main header.header {
     position: fixed;
     left: 250px;
   }
@@ -1118,6 +1130,9 @@ header.header {
 .appbar .btn {
   box-shadow: none;
 }
+.appbar .btn img {
+  max-height: 28px;
+}
 .appbar > div {
   font-weight: normal;
   font-size: 14px;
@@ -1137,6 +1152,19 @@ header.header {
 }
 .appbar *[class*="ion-"]:before {
   font-size: 24px;
+}
+.appbar.appbar-large .btn {
+  padding: 17px 23px;
+}
+.appbar.appbar-large .btn.btn-logo {
+  padding: 7px 15px;
+}
+.appbar.appbar-large .btn.btn-logo img {
+  max-height: 48px;
+}
+.appbar.appbar-large .appbar-text input[type="text"] {
+  padding: 18px 15px 19px 15px;
+  font-size: 18px;
 }
 .appbar-text {
   overflow: hidden;
@@ -1555,6 +1583,10 @@ header.header {
 .card-title.small {
   font-size: 18px;
 }
+.card-subtitle.small {
+  font-size: 13px;
+  color: #84828d;
+}
 .card-title-with-icon {
   white-space: nowrap;
   overflow: hidden;
@@ -1573,9 +1605,25 @@ header.header {
 .card-body {
   background: #fff;
 }
+.card-body .card-title {
+  font-size: 28px;
+  margin-bottom: 45px;
+}
 .card-content {
   padding: 15px;
   text-align: left;
+}
+.card-content .card-image {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+.card-content .card-image > img {
+  max-height: 78px;
+  width: auto;
+}
+.card-content .btn {
+  margin-top: 10px;
 }
 .card-image > img {
   width: 100%;
@@ -2751,6 +2799,16 @@ header.header {
     left: 107%;
     right: -8%;
   }
+}
+.pointer {
+  position: relative;
+  cursor: pointer;
+}
+.media video {
+  display: block;
+  margin-bottom: 0;
+  width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=shire.css.map */

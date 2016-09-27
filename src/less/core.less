@@ -80,6 +80,9 @@ button, button:focus, button:hover, button:active,
     outline: 0 !important;
     border: none;
 }
+h1 {
+    margin-bottom: 20px;
+}
 .small {
     font-size: 85%;
 }
@@ -114,19 +117,25 @@ main {
 content {
     padding: 30px 15px 20px 15px;
     top: 0;
-    left: 48px;
+    left: 0;
     right: 0;
     bottom: 0;
     position: absolute;
     overflow-y: auto;
+}
+nav + main content {
+    left: 48px;
 
     @media (min-width: 992px) {
         right: 0; 
         left: 0;    
-    }
+    }    
 }
 header.header + content {
     top: 42px;
+}
+header.header-large + content {
+    top: 62px;
 }
 content p {
     line-height: 1.5em;
@@ -363,17 +372,21 @@ header.header {
     position: fixed;
     right: 0;
     top: 0;
-    left: 48px;
+    left: 0;
     z-index: 1100;
     -webkit-transition: all .25s ease;
     -moz-transition: all .25s ease;
     -ms-transition: all .25s ease;
     -o-transition: all .25s ease;
     transition: all .25s ease;  
+}
+nav + main header.header {
+    left: 48px;
+
     @media (min-width: 992px) {
         position: fixed;
         left: 250px;
-    }
+    }    
 }
 .appbar {
     .clearfix(); 
@@ -384,48 +397,73 @@ header.header {
 
     .btn {
         box-shadow: none;
-    }
-}
-.appbar > div {
-    font-weight: normal;
-    font-size: 14px;
-    cursor: pointer;
-    border-right: solid 1px #5d9bd6;
-    
-    &:hover {
-        background: @primaryHover;
-        color: @primaryHoverText;
-    }
-    &:last-child {
-        border-right: none;
-    }
-}
-.appbar *[class*="@{icon-prefix}"] {
-    padding: 8px 15px;
-    text-align: center;
 
-    &:before {
-        font-size: 24px;
+        img {
+            max-height: 28px;
+        }
+    }
+    > div {
+        font-weight: normal;
+        font-size: 14px;
+        cursor: pointer;
+        border-right: solid 1px #5d9bd6;
+        
+        &:hover {
+            background: @primaryHover;
+            color: @primaryHoverText;
+        }
+        &:last-child {
+            border-right: none;
+        }        
+    }
+    *[class*="@{icon-prefix}"] {
+        padding: 8px 15px;
+        text-align: center;
+
+        &:before {
+            font-size: 24px;
+        }
+    }    
+
+    &.appbar-large {
+        .btn {
+            padding: 17px 23px;
+            &.btn-logo {
+                padding: 7px 15px;
+                img {
+                    max-height: 48px;
+                }                
+            }
+        }
+        .appbar-text {
+            input[type="text"] {
+                padding: 18px 15px 19px 15px;
+                font-size: 18px;
+            }                 
+        }   
     }
 }
 .appbar-text {
     overflow: hidden;
-}
-.appbar-text input[type="text"] {
-    border: none;
-    padding: 11px 15px;
-    font-size: 14px;
-    background: #fff;
-    color: @inputText;
-    width: 100%;
+    
+    input[type="text"] {
+        border: none;
+        padding: 11px 15px;
+        font-size: 14px;
+        background: #fff;
+        color: @inputText;
+        width: 100%;
 
-    &:focus {
-        outline: 0;
-        color: @inputTextFocus;
+        &:focus {
+            outline: 0;
+            color: @inputTextFocus;
+        }
     }
-}
-.appbar-text:hover input[type="text"] {
-    color: @inputTextFocus;
+    &:hover {
+        input[type="text"] {
+            color: @inputTextFocus;
+        }
+    }
 }
 .send-feedback {
     display: none;
@@ -839,6 +877,10 @@ header.header {
 .card-title.small {
     font-size: 18px;    
 }
+.card-subtitle.small {
+    font-size: 13px;
+    color: @inputTextFocus;
+}
 .card-title-with-icon {
     white-space: nowrap;
     overflow: hidden;
@@ -856,10 +898,29 @@ header.header {
 }
 .card-body {
     background: #fff;
+
+    .card-title {
+        font-size: 28px;
+        margin-bottom: 45px;
+    }
 }
 .card-content {
     padding: 15px;
     text-align: left;
+
+    .card-image {
+        float: right;
+        margin-left: 15px;
+        margin-bottom: 20px;
+
+        > img {
+            max-height: 78px;
+            width: auto;
+        }
+    }
+    .btn {
+        margin-top: 10px;
+    }
 }
 .card-image > img {
     width: 100%;
@@ -2067,5 +2128,18 @@ header.header {
     100% {
         left: 107%;
         right: -8%;
+    }
+}
+.pointer {
+    position: relative;
+    cursor: pointer;
+}
+
+.media {
+    video {
+        display: block;
+        margin-bottom: 0;
+        width: 100%;     
+        height: auto;   
     }
 }
