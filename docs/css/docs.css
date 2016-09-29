@@ -44,13 +44,36 @@ content .page-content {
     position: relative;
     margin-bottom: 30px;    
 }
-
-.card-image.cloud-climb {
-    background: #4791d2;
-    text-align: center;
-    padding: 40px 0;
+.bg {
+    background: url('../img/bg.jpg') top center no-repeat;
+    background-size: cover;
 }
 
-.cloud-climb img {
-    max-width: 50%;
+.cloud-climb {
+    position: absolute;
+    left: 5%;
+    width: 35%;
+    top: 35%;
+    color: #fff;
+}
+
+.cloud-climb .btn {
+    background-color: #eb3c00;
+    margin-top: 20px;
+}
+
+.cloud-climb a.btn {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin-left: 1px;
+}
+
+.video {
+    position: absolute;
+    right: 5%;
+    top: 38%;
+    width: 30%;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2);
+    background: #8899ad;
+    height: 325px;
 }
